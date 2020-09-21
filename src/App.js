@@ -1,8 +1,8 @@
 import React from "react";
-import Buttons from "./components/Buttons";
+import Home from "./pages/Home";
 import "semantic-ui-css/semantic.min.css";
 import "semantic-ui-less/semantic.less";
 
-const App = () => <Buttons />;
+const App = () => <Home />;
 
 export default App;

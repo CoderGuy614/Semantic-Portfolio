@@ -3,7 +3,5 @@
 *******************************/
 
 @primaryColor: #247BA0;
-@secondaryColor: #50514F;
-@thirdColor: #B38CB4;
-@pageBackground: #FFFCFF;
-@grayColor: #50514F;
+@secondaryColor: #B38CB4;
+@pageBackground: #E0E1DD;
