@@ -4,6 +4,7 @@
 import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import HomepageHeading from "../components/HomepageHeading";
 import {
   Button,
   Container,
@@ -27,49 +28,6 @@ const { MediaContextProvider, Media } = createMedia({
   },
 });
 
-/* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
- * components for such things.
- */
-const HomepageHeading = ({ mobile }) => (
-  <Container text>
-    <Header
-      as="h1"
-      content="Jonny Lutz"
-      inverted
-      style={{
-        fontSize: mobile ? "2em" : "4em",
-        fontWeight: "normal",
-        marginBottom: 0,
-        marginTop: mobile ? "1.5em" : "1.25em",
-      }}
-    />
-    <Header
-      as="h2"
-      content="Full Stack JavaScript Developer"
-      inverted
-      style={{
-        fontSize: mobile ? "1.5em" : "1.7em",
-        fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em",
-      }}
-    />
-
-    <Button secondary size="huge">
-      See My Projects
-      <Icon name="right arrow" />
-    </Button>
-  </Container>
-);
-
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool,
-};
-
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = {};
   hideFixedMenu = () => this.setState({ fixed: false });
