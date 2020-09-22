@@ -4,12 +4,7 @@ import { Container, Header, Button, Icon } from "semantic-ui-react";
 
 const HomepageHeading = ({ mobile }) => {
   return (
-    <Container
-      style={{
-        backgroundImage: `url("https://picsum.photos/200")`,
-      }}
-      text
-    >
+    <Container text>
       <Header
         as="h1"
         content="Jonny Lutz"

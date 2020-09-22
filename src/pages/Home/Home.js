@@ -4,7 +4,8 @@
 import { createMedia } from "@artsy/fresnel";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import HomepageHeading from "../components/HomepageHeading";
+import HomepageHeading from "../../components/HomepageHeading";
+import MobileContainer from "../Home/MobileContainer";
 import {
   Button,
   Container,
@@ -44,7 +45,14 @@ class DesktopContainer extends Component {
         >
           <Segment
             textAlign="center"
-            style={{ minHeight: 450, padding: "1em 0em" }}
+            style={{
+              minHeight: 450,
+              padding: "1em 0em",
+              backgroundImage: `url("https://picsum.photos/200")`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
             vertical
             inverted
           >
@@ -78,66 +86,10 @@ DesktopContainer.propTypes = {
   children: PropTypes.node,
 };
 
-class MobileContainer extends Component {
-  state = {};
-  handleSidebarHide = () => this.setState({ sidebarOpened: false });
-  handleToggle = () => this.setState({ sidebarOpened: true });
-  render() {
-    const { children } = this.props;
-    const { sidebarOpened } = this.state;
-
-    return (
-      <Media as={Sidebar.Pushable} at="mobile">
-        <Sidebar.Pushable>
-          <Sidebar
-            as={Menu}
-            animation="overlay"
-            inverted
-            onHide={this.handleSidebarHide}
-            vertical
-            visible={sidebarOpened}
-          >
-            <Menu.Item as="a" active>
-              Home
-            </Menu.Item>
-            <Menu.Item as="a">Work</Menu.Item>
-            <Menu.Item as="a">Company</Menu.Item>
-            <Menu.Item as="a">Careers</Menu.Item>
-          </Sidebar>
-
-          <Sidebar.Pusher dimmed={sidebarOpened}>
-            <Segment
-              inverted
-              textAlign="center"
-              style={{ minHeight: 350, padding: "1em 0em" }}
-              vertical
-            >
-              <Container>
-                <Menu inverted pointing secondary size="large">
-                  <Menu.Item onClick={this.handleToggle}>
-                    <Icon name="sidebar" />
-                  </Menu.Item>
-                </Menu>
-              </Container>
-              <HomepageHeading mobile />
-            </Segment>
-
-            {children}
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
-      </Media>
-    );
-  }
-}
-
-MobileContainer.propTypes = {
-  children: PropTypes.node,
-};
-
 const ResponsiveContainer = ({ children }) => (
   <MediaContextProvider>
     <DesktopContainer>{children}</DesktopContainer>
-    <MobileContainer>{children}</MobileContainer>
+    <MobileContainer Media={Media}>{children}</MobileContainer>
   </MediaContextProvider>
 );
 ResponsiveContainer.propTypes = {
