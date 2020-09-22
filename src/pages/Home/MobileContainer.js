@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import HomepageHeading from "../../components/HomepageHeading";
+
 import { Container, Sidebar, Menu, Segment, Icon } from "semantic-ui-react";
 
 const MobileContainer = ({ children, Media }) => {
@@ -41,7 +41,6 @@ const MobileContainer = ({ children, Media }) => {
                 </Menu.Item>
               </Menu>
             </Container>
-            <HomepageHeading mobile />
           </Segment>
 
           {children}
