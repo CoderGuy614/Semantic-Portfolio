@@ -18,7 +18,6 @@ import {
 const HomepageLayout = () => {
   return (
     <>
-      <HomepageHeading mobile />
       <Segment style={{ padding: "8em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>

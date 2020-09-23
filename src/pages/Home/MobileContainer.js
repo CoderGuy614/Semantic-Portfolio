@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import { Container, Sidebar, Menu, Segment, Icon } from "semantic-ui-react";
+import HomepageHeading from "../../components/HomepageHeading";
 
 const MobileContainer = ({ children, Media }) => {
   const [sidebarOpened, setSidebarOpened] = useState(false);
@@ -46,6 +47,7 @@ const MobileContainer = ({ children, Media }) => {
           {children}
         </Sidebar.Pusher>
       </Sidebar.Pushable>
+      <HomepageHeading mobile />
     </Media>
   );
 };

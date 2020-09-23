@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 import MobileContainer from "./pages/Home/MobileContainer";
 import DesktopContainer from "./pages/Home/DesktopContainer";
 import { createMedia } from "@artsy/fresnel";
@@ -35,6 +36,7 @@ const App = () => {
         <Switch>
           <Route exact path="/about" component={About}></Route>
           <Route exact path="/projects" component={Projects}></Route>
+          <Route exact path="/contact" component={Contact}></Route>
           <Route exact path="/" component={Home}></Route>
         </Switch>
       </ResponsiveContainer>
