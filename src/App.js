@@ -32,14 +32,14 @@ ResponsiveContainer.propTypes = {
 const App = () => {
   return (
     <Router>
-      <ResponsiveContainer>
-        <Switch>
+      <Switch>
+        <ResponsiveContainer>
           <Route exact path="/about" component={About}></Route>
           <Route exact path="/projects" component={Projects}></Route>
           <Route exact path="/contact" component={Contact}></Route>
           <Route exact path="/" component={Home}></Route>
-        </Switch>
-      </ResponsiveContainer>
+        </ResponsiveContainer>
+      </Switch>
     </Router>
   );
 };
