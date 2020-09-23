@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { Container, Visibility, Segment } from "semantic-ui-react";
 import HomepageHeading from "../../components/HomepageHeading";
-import Menu2 from "../../components/Menu2";
+import Navigation from "../../components/Navigation";
 
 const DesktopContainer = ({ children, Media }) => {
   const [fixed, setFixed] = useState(false);
@@ -53,11 +53,6 @@ const DesktopContainer = ({ children, Media }) => {
           vertical
           inverted
         >
-          <Menu2
-            activeItem={activeItem}
-            fixed={fixed}
-            handleItemClick={handleItemClick}
-          />
           <HomepageHeading />
         </Segment>
       </Visibility>
