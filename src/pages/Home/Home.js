@@ -14,11 +14,35 @@ import {
   Image,
   List,
   Segment,
+  Icon,
 } from "semantic-ui-react";
 
 const Home = () => {
   return (
     <>
+      <Container text textAlign="center">
+        <Header
+          as="h1"
+          content="Jonny Lutz"
+          inverted
+          style={{
+            fontSize: "4em",
+            fontWeight: "normal",
+            marginBottom: 0,
+            marginTop: "1.5em",
+          }}
+        />
+        <Header
+          as="h2"
+          content="Full Stack Web Developer"
+          style={{
+            fontSize: "1.7em",
+            fontWeight: "normal",
+            marginTop: "1.5em",
+          }}
+        />
+      </Container>
+
       <Segment style={{ padding: "8em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
