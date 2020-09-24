@@ -19,29 +19,43 @@ import {
 
 const Home = () => {
   return (
-    <>
-      <Container text textAlign="center">
-        <Header
-          as="h1"
-          content="Jonny Lutz"
-          inverted
-          style={{
-            fontSize: "4em",
-            fontWeight: "normal",
-            marginBottom: 0,
-            marginTop: "1.5em",
-          }}
-        />
-        <Header
-          as="h2"
-          content="Full Stack Web Developer"
-          style={{
-            fontSize: "1.7em",
-            fontWeight: "normal",
-            marginTop: "1.5em",
-          }}
-        />
-      </Container>
+    <div>
+      <div>
+        <Grid centered style={{ marginTop: "6em" }}>
+          <Grid.Row>
+            <Grid.Column width={4}>
+              <Image
+                floated="right"
+                circular
+                size="medium"
+                src="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
+              />
+            </Grid.Column>
+            <Grid.Column width={10}>
+              <Header
+                as="h1"
+                content="Jonny Lutz"
+                className="primaryColor"
+                style={{
+                  fontSize: "4em",
+                  fontWeight: "normal",
+                  marginBottom: 0,
+                }}
+              />
+
+              <Header
+                as="h2"
+                className="secondaryColor"
+                content="Full Stack Web Developer"
+                style={{
+                  fontSize: "1.7em",
+                  fontWeight: "normal",
+                }}
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>
 
       <Segment style={{ padding: "8em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
@@ -143,7 +157,7 @@ const Home = () => {
         </Container>
       </Segment>
       <Footer />
-    </>
+    </div>
   );
 };
 

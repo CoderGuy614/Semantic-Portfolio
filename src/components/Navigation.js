@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, withRouter } from "react-router-dom";
 import { Container, Menu, Icon } from "semantic-ui-react";
 const Navigation = () => {
   const [activeItem, setActiveItem] = useState("");
@@ -26,10 +26,16 @@ const Navigation = () => {
     }
   }, [activeItem]);
   return (
-    <Menu fixed="top" size="large" color="teal">
+    <Menu
+      className="bg-secondaryColor"
+      fixed="top"
+      size="large"
+      style={{ marginBottom: "1em" }}
+    >
       <Container>
         <Menu.Item
           name="home"
+          style={{ color: activeItem === "home" ? "#247ba0" : "white" }}
           active={activeItem === "home"}
           onClick={handleItemClick}
           as={NavLink}
@@ -40,6 +46,7 @@ const Navigation = () => {
         </Menu.Item>
         <Menu.Item
           name="projects"
+          style={{ color: activeItem === "projects" ? "#247ba0" : "white" }}
           active={activeItem === "projects"}
           onClick={handleItemClick}
           as={NavLink}
@@ -50,6 +57,7 @@ const Navigation = () => {
         </Menu.Item>
         <Menu.Item
           name="about"
+          style={{ color: activeItem === "about" ? "#247ba0" : "white" }}
           active={activeItem === "about"}
           onClick={handleItemClick}
           as={NavLink}
@@ -60,6 +68,7 @@ const Navigation = () => {
         </Menu.Item>
         <Menu.Item
           name="contact"
+          style={{ color: activeItem === "contact" ? "#247ba0" : "white" }}
           active={activeItem === "contact"}
           onClick={handleItemClick}
           as={NavLink}
