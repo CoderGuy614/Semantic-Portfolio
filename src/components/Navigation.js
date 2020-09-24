@@ -69,26 +69,16 @@ const Navigation = () => {
           Contact
         </Menu.Item>
       </Container>
-      <Container>
-        <Menu.Item
-          as="a"
-          to="http://facebook.com"
-          icon="facebook"
-          position="right"
-        ></Menu.Item>
-        <Menu.Item
-          as="a"
-          to="http://linkedin.com"
-          icon="linkedin"
-          position="right"
-        ></Menu.Item>
-        <Menu.Item
-          as="a"
-          to="http://github.com"
-          icon="github"
-          position="right"
-        ></Menu.Item>
-      </Container>
+
+      <Menu.Item href="http://facebook.com" position="right" target="_blank">
+        <Icon name="facebook" size="large" color="blue" />
+      </Menu.Item>
+      <Menu.Item href="http://linkedin.com" position="right" target="_blank">
+        <Icon name="linkedin" size="large" color="blue" />
+      </Menu.Item>
+      <Menu.Item href="http://github.com" position="right" target="_blank">
+        <Icon name="github" size="large" color="green" />
+      </Menu.Item>
     </Menu>
   );
 };
