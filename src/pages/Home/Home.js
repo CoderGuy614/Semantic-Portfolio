@@ -4,6 +4,7 @@
 import React from "react";
 import HomepageHeading from "../../components/HomepageHeading";
 import Footer from "../../components/Footer";
+import github from "../../img/github.png";
 
 import {
   Button,
@@ -20,42 +21,25 @@ import {
 const Home = () => {
   return (
     <div>
-      <div>
-        <Grid centered style={{ marginTop: "6em" }}>
-          <Grid.Row>
-            <Grid.Column width={4}>
+      <Container fluid style={{ marginTop: "6em", background: "lightblue" }}>
+        <Grid>
+          <Grid.Column width={16} textAlign="center">
+            <Header className="primaryColor" as="h1">
               <Image
-                floated="right"
                 circular
-                size="medium"
+                style={{ width: "150px" }}
                 src="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
-              />
-            </Grid.Column>
-            <Grid.Column width={10}>
-              <Header
-                as="h1"
-                content="Jonny Lutz"
-                className="primaryColor"
-                style={{
-                  fontSize: "4em",
-                  fontWeight: "normal",
-                  marginBottom: 0,
-                }}
-              />
-
-              <Header
-                as="h2"
-                className="secondaryColor"
-                content="Full Stack Web Developer"
-                style={{
-                  fontSize: "1.7em",
-                  fontWeight: "normal",
-                }}
-              />
-            </Grid.Column>
-          </Grid.Row>
+              />{" "}
+              <Header.Content>
+                Jonny Lutz
+                <Header.Subheader className="secondaryColor">
+                  Full Stack Web Developer
+                </Header.Subheader>
+              </Header.Content>
+            </Header>
+          </Grid.Column>
         </Grid>
-      </div>
+      </Container>
 
       <Segment style={{ padding: "8em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
