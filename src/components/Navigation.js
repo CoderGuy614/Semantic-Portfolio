@@ -35,7 +35,6 @@ const Navigation = () => {
       <Container>
         <Menu.Item
           name="home"
-          style={{ color: activeItem === "home" ? "#247ba0" : "white" }}
           active={activeItem === "home"}
           onClick={handleItemClick}
           as={NavLink}
@@ -46,7 +45,6 @@ const Navigation = () => {
         </Menu.Item>
         <Menu.Item
           name="projects"
-          style={{ color: activeItem === "projects" ? "#247ba0" : "white" }}
           active={activeItem === "projects"}
           onClick={handleItemClick}
           as={NavLink}
@@ -57,7 +55,6 @@ const Navigation = () => {
         </Menu.Item>
         <Menu.Item
           name="about"
-          style={{ color: activeItem === "about" ? "#247ba0" : "white" }}
           active={activeItem === "about"}
           onClick={handleItemClick}
           as={NavLink}
@@ -68,7 +65,6 @@ const Navigation = () => {
         </Menu.Item>
         <Menu.Item
           name="contact"
-          style={{ color: activeItem === "contact" ? "#247ba0" : "white" }}
           active={activeItem === "contact"}
           onClick={handleItemClick}
           as={NavLink}
@@ -86,7 +82,7 @@ const Navigation = () => {
         <Icon name="linkedin" size="large" color="blue" />
       </Menu.Item>
       <Menu.Item href="http://github.com" position="right" target="_blank">
-        <Icon name="github" size="large" color="green" />
+        <Icon name="github" size="large" color="black" />
       </Menu.Item>
     </Menu>
   );

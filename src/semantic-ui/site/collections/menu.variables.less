@@ -10,10 +10,29 @@
   background-color: @secondaryColor;
 }
 
-.ui.menu.item.text-primaryColor {
-  color: @primaryColor;
+.ui.menu {
+  a.item.text-primary {
+    color: @primaryColor;
+  }
 }
 
-.ui.menu.item.text-secondaryColor {
-  color: @secondaryColor;
+.ui.menu {
+  a.item.text-secondary {
+    color: @secondaryColor;
+  }
+}
+
+.ui.menu {
+  a.item.text-white {
+    color: @pageBackground;
+  }
+}
+
+.ui.menu {
+  a.item {
+    color: @pageBackground;
+    &.active {
+      color: @primaryColor;
+    }
+  }
 }
