@@ -2,9 +2,7 @@
 /* eslint-disable react/no-multi-comp */
 
 import React from "react";
-import HomepageHeading from "../../components/HomepageHeading";
 import Footer from "../../components/Footer";
-import github from "../../img/github.png";
 
 import {
   Button,
@@ -17,6 +15,27 @@ import {
   Segment,
   Icon,
 } from "semantic-ui-react";
+
+const iconContainerStyle = {
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center",
+};
+
+const iconStyle = {
+  maxWidth: "50px",
+  margin: "1em",
+};
+
+const iconStyleBack = {
+  maxWidth: "75px",
+  margin: "1em",
+};
+
+const iconStyleDev = {
+  maxWidth: "100px",
+  margin: "1em",
+};
 
 const Home = () => {
   return (
@@ -46,7 +65,7 @@ const Home = () => {
           <Grid.Row>
             <Grid.Column width={8}>
               <Header as="h3" style={{ fontSize: "2em" }}>
-                We Help Companies and Companions
+                Not your average web developer...
               </Header>
               <p style={{ fontSize: "1.33em" }}>
                 We can give your company superpowers to do things that they
@@ -62,12 +81,56 @@ const Home = () => {
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
-              <Image
-                bordered
-                rounded
-                size="large"
-                src="/images/wireframe/white-image.png"
-              />
+              <Header textAlign="center"> Front End Technologies</Header>
+              <Segment style={iconContainerStyle}>
+                <Image style={iconStyle} src={require("../../img/html.png")} />
+                <Image style={iconStyle} src={require("../../img/css.png")} />
+                <Image style={iconStyle} src={require("../../img/js.png")} />
+                <Image
+                  style={iconStyle}
+                  src={require("../../img/react2.jpg")}
+                />
+                <Image style={iconStyle} src={require("../../img/sass.png")} />
+                <Image
+                  style={iconStyle}
+                  src={require("../../img/reactBootstrap.png")}
+                />
+              </Segment>
+              <Header textAlign="center"> Back End Technologies</Header>
+              <Segment style={iconContainerStyle}>
+                <Image
+                  style={iconStyleBack}
+                  src={require("../../img/mongo.png")}
+                />
+                <Image
+                  style={iconStyleBack}
+                  src={require("../../img/mysql.png")}
+                />
+                <Image
+                  style={iconStyleBack}
+                  src={require("../../img/node.png")}
+                />
+                <Image
+                  style={iconStyleDev}
+                  src={require("../../img/express.png")}
+                />
+              </Segment>
+              <Header textAlign="center">Development Tools</Header>
+              <Segment style={iconContainerStyle}>
+                <Image
+                  style={iconStyleDev}
+                  src={require("../../img/postman.png")}
+                />
+                <Image
+                  style={iconStyleDev}
+                  src={require("../../img/git.png")}
+                />
+
+                <Image
+                  style={iconStyle}
+                  src={require("../../img/terminal.png")}
+                />
+              </Segment>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
