@@ -3,6 +3,8 @@
 
 import React from "react";
 import Footer from "../../components/Footer";
+import CardCarousel from "../../components/CardCarousel";
+import TechIcons from "../../components/TechIcons";
 
 import {
   Button,
@@ -16,31 +18,16 @@ import {
   Icon,
 } from "semantic-ui-react";
 
-const iconContainerStyle = {
+const carouselContainerStyle = {
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
 };
 
-const iconStyle = {
-  maxWidth: "50px",
-  margin: "1em",
-};
-
-const iconStyleBack = {
-  maxWidth: "75px",
-  margin: "1em",
-};
-
-const iconStyleDev = {
-  maxWidth: "100px",
-  margin: "1em",
-};
-
 const Home = () => {
   return (
     <div>
-      <Container fluid style={{ marginTop: "6em", background: "lightblue" }}>
+      <Container fluid style={{ marginTop: "4em", background: "lightblue" }}>
         <Grid>
           <Grid.Column width={16} textAlign="center">
             <Header className="primaryColor" as="h1">
@@ -60,10 +47,16 @@ const Home = () => {
         </Grid>
       </Container>
 
-      <Segment style={{ padding: "8em 0em" }} vertical>
+      <Segment style={{ padding: "4em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
-          <Grid.Row>
-            <Grid.Column width={8}>
+          <Grid.Column width={10}>
+            <Header className="primaryColor" textAlign="center">
+              Featured Project - LocalBiz
+            </Header>
+            <Grid.Row style={carouselContainerStyle}>
+              <CardCarousel />
+            </Grid.Row>
+            <Grid.Row>
               <Header as="h3" style={{ fontSize: "2em" }}>
                 Not your average web developer...
               </Header>
@@ -72,72 +65,15 @@ const Home = () => {
                 never thought possible. Let us delight your customers and
                 empower your needs... through pure data analytics.
               </p>
-              <Header as="h3" style={{ fontSize: "2em" }}>
-                We Make Bananas That Can Dance
-              </Header>
-              <p style={{ fontSize: "1.33em" }}>
-                Yes that's right, you thought it was the stuff of dreams, but
-                even bananas can be bioengineered.
-              </p>
-            </Grid.Column>
-            <Grid.Column floated="right" width={6}>
-              <Header textAlign="center"> Front End Technologies</Header>
-              <Segment style={iconContainerStyle}>
-                <Image style={iconStyle} src={require("../../img/html.png")} />
-                <Image style={iconStyle} src={require("../../img/css.png")} />
-                <Image style={iconStyle} src={require("../../img/js.png")} />
-                <Image
-                  style={iconStyle}
-                  src={require("../../img/react2.jpg")}
-                />
-                <Image style={iconStyle} src={require("../../img/sass.png")} />
-                <Image
-                  style={iconStyle}
-                  src={require("../../img/reactBootstrap.png")}
-                />
-              </Segment>
-              <Header textAlign="center"> Back End Technologies</Header>
-              <Segment style={iconContainerStyle}>
-                <Image
-                  style={iconStyleBack}
-                  src={require("../../img/mongo.png")}
-                />
-                <Image
-                  style={iconStyleBack}
-                  src={require("../../img/mysql.png")}
-                />
-                <Image
-                  style={iconStyleBack}
-                  src={require("../../img/node.png")}
-                />
-                <Image
-                  style={iconStyleDev}
-                  src={require("../../img/express.png")}
-                />
-              </Segment>
-              <Header textAlign="center">Development Tools</Header>
-              <Segment style={iconContainerStyle}>
-                <Image
-                  style={iconStyleDev}
-                  src={require("../../img/postman.png")}
-                />
-                <Image
-                  style={iconStyleDev}
-                  src={require("../../img/git.png")}
-                />
+            </Grid.Row>
+          </Grid.Column>
+          <Grid.Column floated="right" width={6}>
+            <TechIcons />
+          </Grid.Column>
 
-                <Image
-                  style={iconStyle}
-                  src={require("../../img/terminal.png")}
-                />
-              </Segment>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column textAlign="center">
-              <Button size="huge">Check Them Out</Button>
-            </Grid.Column>
-          </Grid.Row>
+          <Grid.Column textAlign="center">
+            <Button size="huge">Check Them Out</Button>
+          </Grid.Column>
         </Grid>
       </Segment>
 

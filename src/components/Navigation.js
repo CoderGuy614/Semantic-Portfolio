@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import { Container, Menu, Icon } from "semantic-ui-react";
+
+const socialMenuStyle = {
+  display: "flex",
+  justifyContent: "center",
+};
+
+const socialMenuIconStyle = {
+  marginRight: "0px !important",
+};
+
 const Navigation = () => {
   const [activeItem, setActiveItem] = useState("");
   const handleItemClick = (e, { name }) => setActiveItem(name);
@@ -75,15 +85,17 @@ const Navigation = () => {
         </Menu.Item>
       </Container>
 
-      <Menu.Item href="http://facebook.com" position="right" target="_blank">
-        <Icon name="facebook" size="large" color="blue" />
-      </Menu.Item>
-      <Menu.Item href="http://linkedin.com" position="right" target="_blank">
-        <Icon name="linkedin" size="large" color="blue" />
-      </Menu.Item>
-      <Menu.Item href="http://github.com" position="right" target="_blank">
-        <Icon name="github" size="large" color="black" />
-      </Menu.Item>
+      <Menu.Menu position="right" style={socialMenuStyle}>
+        <Menu.Item href="http://facebook.com" target="_blank">
+          <Icon name="facebook" size="large" style={socialMenuIconStyle} />
+        </Menu.Item>
+        <Menu.Item href="http://linkedin.com" target="_blank">
+          <Icon name="linkedin" size="large" style={socialMenuIconStyle} />
+        </Menu.Item>
+        <Menu.Item href="http://github.com" target="_blank">
+          <Icon name="github" size="large" style={socialMenuIconStyle} />
+        </Menu.Item>
+      </Menu.Menu>
     </Menu>
   );
 };

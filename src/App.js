@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
 import "semantic-ui-css/semantic.min.css";
 import "semantic-ui-less/semantic.less";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 const App = () => {
   return (
