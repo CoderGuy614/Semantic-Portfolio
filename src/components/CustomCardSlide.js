@@ -6,7 +6,7 @@ import { Card } from "semantic-ui-react";
 const CustomCardSlide = ({ index, ...cardProps }) => (
   <Slide index={index}>
     <div style={{ padding: 10 }}>
-      <Card fluid {...cardProps} />
+      <Card fluid {...cardProps} color="teal" raised />
     </div>
   </Slide>
 );

@@ -57,7 +57,7 @@ const Home = () => {
               <CardCarousel />
             </Grid.Row>
             <Grid.Row>
-              <Header as="h3" style={{ fontSize: "2em" }}>
+              <Header as="h3" style={{ fontSize: "2em", marginTop: "2em" }}>
                 Not your average web developer...
               </Header>
               <p style={{ fontSize: "1.33em" }}>
@@ -69,10 +69,6 @@ const Home = () => {
           </Grid.Column>
           <Grid.Column floated="right" width={6}>
             <TechIcons />
-          </Grid.Column>
-
-          <Grid.Column textAlign="center">
-            <Button size="huge">Check Them Out</Button>
           </Grid.Column>
         </Grid>
       </Segment>
