@@ -2,6 +2,7 @@
 /* eslint-disable react/no-multi-comp */
 
 import React from "react";
+import PageHeader from "../../components/PageHeader";
 import Footer from "../../components/Footer";
 import CardCarousel from "../../components/CardCarousel";
 import TechIcons from "../../components/TechIcons";
@@ -13,9 +14,7 @@ import {
   Grid,
   Header,
   Image,
-  List,
   Segment,
-  Icon,
 } from "semantic-ui-react";
 
 const carouselContainerStyle = {
@@ -27,28 +26,14 @@ const carouselContainerStyle = {
 const Home = () => {
   return (
     <div>
-      <Container fluid style={{ marginTop: "4em", background: "lightblue" }}>
-        <Grid>
-          <Grid.Column width={16} textAlign="center">
-            <Header className="primaryColor" as="h1">
-              <Image
-                circular
-                style={{ width: "150px" }}
-                src="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
-              />{" "}
-              <Header.Content>
-                Jonny Lutz
-                <Header.Subheader className="secondaryColor">
-                  Full Stack Web Developer
-                </Header.Subheader>
-              </Header.Content>
-            </Header>
-          </Grid.Column>
-        </Grid>
-      </Container>
+      <PageHeader
+        img="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
+        mainText="Jonny Lutz"
+        subText="Full Stack Web Developer"
+      />
 
       <Segment style={{ padding: "4em 0em" }} vertical>
-        <Grid container stackable verticalAlign="middle">
+        <Grid container stackable>
           <Grid.Column width={10}>
             <Header className="primaryColor" textAlign="center">
               Featured Project - LocalBiz

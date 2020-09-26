@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link, withRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Container, Menu, Icon } from "semantic-ui-react";
 
 const socialMenuStyle = {
@@ -36,12 +36,7 @@ const Navigation = () => {
     }
   }, [activeItem]);
   return (
-    <Menu
-      className="bg-secondaryColor"
-      fixed="top"
-      size="large"
-      style={{ marginBottom: "1em" }}
-    >
+    <Menu className="bg-secondaryColor" fixed="top" size="large">
       <Container>
         <Menu.Item
           name="home"

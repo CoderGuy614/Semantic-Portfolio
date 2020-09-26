@@ -4,7 +4,7 @@ import {
   Slider,
   ButtonNext,
 } from "pure-react-carousel";
-import { Icon, Segment } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 import React from "react";
 
 import CustomCardSlide from "../components/CustomCardSlide";
