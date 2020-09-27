@@ -96,6 +96,26 @@ const Projects = () => {
           <Divider horizontal>
             <Icon name="star" color="yellow" />
           </Divider>
+          {/* Project 5 E-Commerce */}
+          <Item style={itemStyle}>
+            <Item.Image
+              size="large"
+              src={require("../img/projects/Ecommerce/project_5_4.png")}
+            />
+
+            <Item.Content>
+              <Item.Header as="a">E-Commerce Shop</Item.Header>
+              <Item.Meta>Online Clothing Store</Item.Meta>
+              <Item.Description>
+                <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
+              </Item.Description>
+              <Item.Extra>Additional Details</Item.Extra>
+            </Item.Content>
+          </Item>
+
+          <Divider horizontal>
+            <Icon name="star" color="yellow" />
+          </Divider>
         </Item.Group>
       </Container>
       <Footer />

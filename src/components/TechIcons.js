@@ -59,7 +59,7 @@ const TechIcons = () => {
         <Image style={iconStyleL} src={require("../img/postman.png")} />
         <Image style={iconStyleL} src={require("../img/git.png")} />
         <Image style={iconStyleXL} src={require("../img/vscode.png")} />
-        <Image style={iconStyleS} src={require("../img/mocha.png")} />
+
         <Image style={iconStyleM} src={require("../img/npm.png")} />
       </Segment>
     </>
