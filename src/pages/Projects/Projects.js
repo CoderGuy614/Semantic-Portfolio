@@ -109,7 +109,9 @@ const Projects = () => {
       <PageHeader
         img="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
         mainText="Projects"
-        subText="Check Out Some of My Recent Work"
+        subText="Check out Some of My Work"
+        buttonText="Contact Me"
+        buttonUrl="/contact"
       />
       <Container style={{ position: "relative" }}>
         <Item.Group style={{ position: "relative" }}>

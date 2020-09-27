@@ -12,10 +12,11 @@ const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
   return (
     <Container
       fluid
-      style={{ marginTop: "50px", height: "200px", background: "lightblue" }}
+      style={{ marginTop: "50px", height: "200px" }}
+      className="primaryColor"
     >
       <div style={headerStyle}>
-        <Header className="primaryColor" as="h1">
+        <Header className="pageBackground" as="h1">
           <Image circular style={{ width: "150px" }} src={img} />{" "}
           <Header.Content>
             {mainText}
@@ -23,15 +24,29 @@ const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
               {subText}
             </Header.Subheader>
             {buttonText && (
-              <Button
-                style={{ marginTop: "1.5em" }}
-                primary
-                size="large"
-                icon="arrow right"
-                content={buttonText}
-                labelPosition="right"
-                href={buttonUrl}
-              />
+              <div style={{ marginTop: ".5em" }}>
+                <Button.Group>
+                  <Button
+                    color="teal"
+                    // style={{ marginTop: "1.5em" }}
+                    size="large"
+                    // icon="arrow right"
+                    content="Projects"
+                    // labelPosition="right"
+                    // href={buttonUrl}
+                  />
+                  <Button.Or />
+                  <Button
+                    secondary
+                    // style={{ marginTop: "1.5em" }}
+                    size="large"
+                    // icon="arrow right"
+                    content="About"
+                    // labelPosition="right"
+                    // href={buttonUrl}
+                  />
+                </Button.Group>
+              </div>
             )}
           </Header.Content>
         </Header>

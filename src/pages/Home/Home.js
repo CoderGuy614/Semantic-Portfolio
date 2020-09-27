@@ -29,7 +29,7 @@ const Home = () => {
       <PageHeader
         img="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
         mainText="Jonny Lutz"
-        subText="Full Stack Web Developer"
+        subText={"Full Stack Web Developer"}
         buttonText="See My Work"
         buttonUrl="/projects"
       />

@@ -9,7 +9,6 @@ import {
 import { Icon } from "semantic-ui-react";
 import React from "react";
 
-// import CustomCardSlide from "./CustomCardSlide";
 import CustomDotGroup from "./CustomDotGroup";
 
 const buttonStyle = {
@@ -23,7 +22,13 @@ const CardCarousel = ({ images }) => (
     naturalSlideWidth={1.25}
     naturalSlideHeight={1}
     totalSlides={images.length}
-    style={{ maxWidth: "500px", marginRight: "2em" }}
+    style={{
+      maxWidth: "500px",
+      marginRight: "2em",
+      border: "2px solid #247ba0",
+      padding: "10px",
+      borderRadius: "10px",
+    }}
     infinite
   >
     <Slider>
