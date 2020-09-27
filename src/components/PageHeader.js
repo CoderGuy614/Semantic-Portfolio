@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Header, Image } from "semantic-ui-react";
+import { Container, Header, Image, Button } from "semantic-ui-react";
 
-const PageHeader = ({ img, mainText, subText }) => {
+const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
   const headerStyle = {
     display: "flex",
     justifyContent: "center",
@@ -22,6 +22,17 @@ const PageHeader = ({ img, mainText, subText }) => {
             <Header.Subheader className="secondaryColor">
               {subText}
             </Header.Subheader>
+            {buttonText && (
+              <Button
+                style={{ marginTop: "1.5em" }}
+                primary
+                size="large"
+                icon="arrow right"
+                content={buttonText}
+                labelPosition="right"
+                href={buttonUrl}
+              />
+            )}
           </Header.Content>
         </Header>
       </div>
