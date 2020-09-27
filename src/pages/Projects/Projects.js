@@ -8,8 +8,23 @@ import {
   Segment,
   Button,
 } from "semantic-ui-react";
-import PageHeader from "../components/PageHeader";
-import Footer from "../components/Footer";
+import CardCarouselProject from "./CardCarouselProject/CardCarouselProject";
+import PageHeader from "../../components/PageHeader";
+import Footer from "../../components/Footer";
+import CardCarousel from "../../components/CardCarouselFeatured/CardCarousel";
+
+const localBizImages = [
+  require("../../img/projects/LocalBiz/project_7_1.png"),
+  require("../../img/projects/LocalBiz/project_7_2.png"),
+  require("../../img/projects/LocalBiz/project_7_3.png"),
+  require("../../img/projects/LocalBiz/project_7_4.png"),
+  require("../../img/projects/LocalBiz/project_7_5.png"),
+  require("../../img/projects/LocalBiz/project_7_6.png"),
+  require("../../img/projects/LocalBiz/project_7_7.png"),
+  require("../../img/projects/LocalBiz/project_7_8.png"),
+  require("../../img/projects/LocalBiz/project_7_9.png"),
+  require("../../img/projects/LocalBiz/project_7_10.png"),
+];
 
 const iconContainerStyle = {
   display: "flex",
@@ -51,10 +66,7 @@ const Projects = () => {
         <Item.Group style={{ position: "relative" }}>
           {/* Project 1 LocalBiz */}
           <Item style={itemStyle}>
-            <Item.Image
-              size="large"
-              src={require("../img/projects/LocalBiz/project_7_1.png")}
-            />
+            <CardCarouselProject images={localBizImages} />
 
             <Item.Content>
               <Item.Header as="a">LocalBiz</Item.Header>
@@ -68,17 +80,38 @@ const Projects = () => {
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={iconContainerStyle}>
-                <Image style={iconStyleXS} src={require("../img/html.png")} />
-                <Image style={iconStyleXS} src={require("../img/css.png")} />
-                <Image style={iconStyleXS} src={require("../img/js.png")} />
-                <Image style={iconStyleXS} src={require("../img/react2.jpg")} />
                 <Image
                   style={iconStyleXS}
-                  src={require("../img/reactBootstrap.png")}
+                  src={require("../../img/tech-icons/html.png")}
                 />
-                <Image style={iconStyleS} src={require("../img/node.png")} />
-                <Image style={iconStyleS} src={require("../img/express.png")} />
-                <Image style={iconStyleS} src={require("../img/mongo.png")} />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/css.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/js.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/react2.jpg")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/reactBootstrap.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/node.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/express.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/mongo.png")}
+                />
               </Segment>
               <div style={buttonStyle}>
                 <Button
@@ -106,7 +139,7 @@ const Projects = () => {
           <Item style={itemStyle}>
             <Item.Image
               size="large"
-              src={require("../img/projects/VeggieKing/project_1_2.png")}
+              src={require("../../img/projects/VeggieKing/project_1_2.png")}
             />
 
             <Item.Content>
@@ -121,17 +154,38 @@ const Projects = () => {
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={iconContainerStyle}>
-                <Image style={iconStyleXS} src={require("../img/html.png")} />
-                <Image style={iconStyleXS} src={require("../img/css.png")} />
-                <Image style={iconStyleXS} src={require("../img/js.png")} />
-                <Image style={iconStyleXS} src={require("../img/react2.jpg")} />
                 <Image
                   style={iconStyleXS}
-                  src={require("../img/reactBootstrap.png")}
+                  src={require("../../img/tech-icons/html.png")}
                 />
-                <Image style={iconStyleS} src={require("../img/node.png")} />
-                <Image style={iconStyleS} src={require("../img/express.png")} />
-                <Image style={iconStyleS} src={require("../img/mongo.png")} />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/css.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/js.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/react2.jpg")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/reactBootstrap.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/node.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/express.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/mongo.png")}
+                />
               </Segment>
               <div style={buttonStyle}>
                 <Button
@@ -159,7 +213,7 @@ const Projects = () => {
           <Item style={itemStyle}>
             <Item.Image
               size="large"
-              src={require("../img/projects/RealEstate/project_6_2.png")}
+              src={require("../../img/projects/RealEstate/project_6_2.png")}
             />
 
             <Item.Content>
@@ -174,17 +228,38 @@ const Projects = () => {
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={iconContainerStyle}>
-                <Image style={iconStyleXS} src={require("../img/html.png")} />
-                <Image style={iconStyleXS} src={require("../img/css.png")} />
-                <Image style={iconStyleXS} src={require("../img/js.png")} />
-                <Image style={iconStyleXS} src={require("../img/react2.jpg")} />
                 <Image
                   style={iconStyleXS}
-                  src={require("../img/reactBootstrap.png")}
+                  src={require("../../img/tech-icons/html.png")}
                 />
-                <Image style={iconStyleS} src={require("../img/node.png")} />
-                <Image style={iconStyleS} src={require("../img/express.png")} />
-                <Image style={iconStyleS} src={require("../img/mongo.png")} />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/css.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/js.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/react2.jpg")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/reactBootstrap.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/node.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/express.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/mongo.png")}
+                />
               </Segment>
               <div style={buttonStyle}>
                 <Button
@@ -212,7 +287,7 @@ const Projects = () => {
           <Item style={itemStyle}>
             <Item.Image
               size="large"
-              src={require("../img/projects/CamboCraft/project_2_1.png")}
+              src={require("../../img/projects/CamboCraft/project_2_1.png")}
             />
 
             <Item.Content>
@@ -227,17 +302,38 @@ const Projects = () => {
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={iconContainerStyle}>
-                <Image style={iconStyleXS} src={require("../img/html.png")} />
-                <Image style={iconStyleXS} src={require("../img/css.png")} />
-                <Image style={iconStyleXS} src={require("../img/js.png")} />
-                <Image style={iconStyleXS} src={require("../img/react2.jpg")} />
                 <Image
                   style={iconStyleXS}
-                  src={require("../img/reactBootstrap.png")}
+                  src={require("../../img/tech-icons/html.png")}
                 />
-                <Image style={iconStyleS} src={require("../img/node.png")} />
-                <Image style={iconStyleS} src={require("../img/express.png")} />
-                <Image style={iconStyleS} src={require("../img/mongo.png")} />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/css.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/js.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/react2.jpg")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/reactBootstrap.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/node.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/express.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/mongo.png")}
+                />
               </Segment>
               <div style={buttonStyle}>
                 <Button
@@ -265,7 +361,7 @@ const Projects = () => {
           <Item style={itemStyle}>
             <Item.Image
               size="large"
-              src={require("../img/projects/Ecommerce/project_5_4.png")}
+              src={require("../../img/projects/Ecommerce/project_5_4.png")}
             />
 
             <Item.Content>
@@ -280,17 +376,38 @@ const Projects = () => {
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={iconContainerStyle}>
-                <Image style={iconStyleXS} src={require("../img/html.png")} />
-                <Image style={iconStyleXS} src={require("../img/css.png")} />
-                <Image style={iconStyleXS} src={require("../img/js.png")} />
-                <Image style={iconStyleXS} src={require("../img/react2.jpg")} />
                 <Image
                   style={iconStyleXS}
-                  src={require("../img/reactBootstrap.png")}
+                  src={require("../../img/tech-icons/html.png")}
                 />
-                <Image style={iconStyleS} src={require("../img/node.png")} />
-                <Image style={iconStyleS} src={require("../img/express.png")} />
-                <Image style={iconStyleS} src={require("../img/mongo.png")} />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/css.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/js.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/react2.jpg")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/reactBootstrap.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/node.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/express.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/mongo.png")}
+                />
               </Segment>
               <div style={buttonStyle}>
                 <Button
@@ -318,7 +435,7 @@ const Projects = () => {
           <Item style={itemStyle}>
             <Item.Image
               size="large"
-              src={require("../img/projects/Spotify/project_4_2.jpg")}
+              src={require("../../img/projects/Spotify/project_4_2.jpg")}
             />
 
             <Item.Content>
@@ -333,17 +450,38 @@ const Projects = () => {
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={iconContainerStyle}>
-                <Image style={iconStyleXS} src={require("../img/html.png")} />
-                <Image style={iconStyleXS} src={require("../img/css.png")} />
-                <Image style={iconStyleXS} src={require("../img/js.png")} />
-                <Image style={iconStyleXS} src={require("../img/react2.jpg")} />
                 <Image
                   style={iconStyleXS}
-                  src={require("../img/reactBootstrap.png")}
+                  src={require("../../img/tech-icons/html.png")}
                 />
-                <Image style={iconStyleS} src={require("../img/node.png")} />
-                <Image style={iconStyleS} src={require("../img/express.png")} />
-                <Image style={iconStyleS} src={require("../img/mongo.png")} />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/css.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/js.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/react2.jpg")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/reactBootstrap.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/node.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/express.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/mongo.png")}
+                />
               </Segment>
               <div style={buttonStyle}>
                 <Button
@@ -372,7 +510,7 @@ const Projects = () => {
           <Item style={itemStyle}>
             <Item.Image
               size="large"
-              src={require("../img/projects/AirBnB/project_3_2.jpg")}
+              src={require("../../img/projects/AirBnB/project_3_2.jpg")}
             />
 
             <Item.Content>
@@ -387,17 +525,38 @@ const Projects = () => {
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={iconContainerStyle}>
-                <Image style={iconStyleXS} src={require("../img/html.png")} />
-                <Image style={iconStyleXS} src={require("../img/css.png")} />
-                <Image style={iconStyleXS} src={require("../img/js.png")} />
-                <Image style={iconStyleXS} src={require("../img/react2.jpg")} />
                 <Image
                   style={iconStyleXS}
-                  src={require("../img/reactBootstrap.png")}
+                  src={require("../../img/tech-icons/html.png")}
                 />
-                <Image style={iconStyleS} src={require("../img/node.png")} />
-                <Image style={iconStyleS} src={require("../img/express.png")} />
-                <Image style={iconStyleS} src={require("../img/mongo.png")} />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/css.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/js.png")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/react2.jpg")}
+                />
+                <Image
+                  style={iconStyleXS}
+                  src={require("../../img/tech-icons/reactBootstrap.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/node.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/express.png")}
+                />
+                <Image
+                  style={iconStyleS}
+                  src={require("../../img/tech-icons/mongo.png")}
+                />
               </Segment>
               <div style={buttonStyle}>
                 <Button

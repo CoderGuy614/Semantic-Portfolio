@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
 import "semantic-ui-css/semantic.min.css";

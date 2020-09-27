@@ -35,32 +35,53 @@ const TechIcons = () => {
         Front End Technologies
       </Header>
       <Segment style={iconContainerStyle}>
-        <Image style={iconStyleS} src={require("../img/html.png")} />
-        <Image style={iconStyleS} src={require("../img/css.png")} />
-        <Image style={iconStyleS} src={require("../img/js.png")} />
-        <Image style={iconStyleS} src={require("../img/react2.jpg")} />
-        <Image style={iconStyleS} src={require("../img/sass.png")} />
-        <Image style={iconStyleS} src={require("../img/reactBootstrap.png")} />
+        <Image style={iconStyleS} src={require("../img/tech-icons/html.png")} />
+        <Image style={iconStyleS} src={require("../img/tech-icons/css.png")} />
+        <Image style={iconStyleS} src={require("../img/tech-icons/js.png")} />
+        <Image
+          style={iconStyleS}
+          src={require("../img/tech-icons/react2.jpg")}
+        />
+        <Image style={iconStyleS} src={require("../img/tech-icons/sass.png")} />
+        <Image
+          style={iconStyleS}
+          src={require("../img/tech-icons/reactBootstrap.png")}
+        />
       </Segment>
       <Header className="primaryColor" textAlign="center">
         {" "}
         Back End Technologies
       </Header>
       <Segment style={iconContainerStyle}>
-        <Image style={iconStyleL} src={require("../img/mongo.png")} />
-        <Image style={iconStyleM} src={require("../img/mysql.png")} />
-        <Image style={iconStyleM} src={require("../img/node.png")} />
-        <Image style={iconStyleL} src={require("../img/express.png")} />
+        <Image
+          style={iconStyleL}
+          src={require("../img/tech-icons/mongo.png")}
+        />
+        <Image
+          style={iconStyleM}
+          src={require("../img/tech-icons/mysql.png")}
+        />
+        <Image style={iconStyleM} src={require("../img/tech-icons/node.png")} />
+        <Image
+          style={iconStyleL}
+          src={require("../img/tech-icons/express.png")}
+        />
       </Segment>
       <Header className="primaryColor" textAlign="center">
         Development Tools
       </Header>
       <Segment style={iconContainerStyle}>
-        <Image style={iconStyleL} src={require("../img/postman.png")} />
-        <Image style={iconStyleL} src={require("../img/git.png")} />
-        <Image style={iconStyleXL} src={require("../img/vscode.png")} />
+        <Image
+          style={iconStyleL}
+          src={require("../img/tech-icons/postman.png")}
+        />
+        <Image style={iconStyleL} src={require("../img/tech-icons/git.png")} />
+        <Image
+          style={iconStyleXL}
+          src={require("../img/tech-icons/vscode.png")}
+        />
 
-        <Image style={iconStyleM} src={require("../img/npm.png")} />
+        <Image style={iconStyleM} src={require("../img/tech-icons/npm.png")} />
       </Segment>
     </>
   );

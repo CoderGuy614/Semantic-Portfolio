@@ -4,7 +4,7 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader";
 import Footer from "../../components/Footer";
-import CardCarousel from "../../components/CardCarousel";
+import CardCarousel from "../../components/CardCarouselFeatured/CardCarousel";
 import TechIcons from "../../components/TechIcons";
 
 import {
