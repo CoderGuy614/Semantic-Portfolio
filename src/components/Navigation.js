@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Container, Menu, Icon } from "semantic-ui-react";
+import { Container, Menu, Icon, Dropdown, Button } from "semantic-ui-react";
+
+const friendOptions = [
+  { text: "", value: "" },
+  { text: "Option1" },
+  { text: "Option2" },
+];
 
 const socialMenuStyle = {
   display: "flex",
@@ -82,13 +88,29 @@ const Navigation = () => {
 
       <Menu.Menu position="right" style={socialMenuStyle}>
         <Menu.Item href="http://facebook.com" target="_blank">
-          <Icon name="facebook" size="large" style={socialMenuIconStyle} />
+          <Icon
+            name="facebook"
+            style={{ marginRight: "0px !important", color: "#4267B2" }}
+            size="large"
+          />
         </Menu.Item>
         <Menu.Item href="http://linkedin.com" target="_blank">
-          <Icon name="linkedin" size="large" style={socialMenuIconStyle} />
+          <Icon
+            name="linkedin"
+            size="large"
+            style={{
+              marginRight: "0px !important",
+              color: "#0072b1",
+            }}
+          />
         </Menu.Item>
-        <Menu.Item href="http://github.com" target="_blank">
-          <Icon name="github" size="large" style={socialMenuIconStyle} />
+        <Menu.Item>
+          <Dropdown
+            simple
+            icon="github"
+            options={friendOptions}
+            defaultValue={null}
+          />
         </Menu.Item>
       </Menu.Menu>
     </Menu>

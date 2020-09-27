@@ -24,29 +24,15 @@ const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
               {subText}
             </Header.Subheader>
             {buttonText && (
-              <div style={{ marginTop: ".5em" }}>
-                <Button.Group>
-                  <Button
-                    color="teal"
-                    // style={{ marginTop: "1.5em" }}
-                    size="large"
-                    // icon="arrow right"
-                    content="Projects"
-                    // labelPosition="right"
-                    // href={buttonUrl}
-                  />
-                  <Button.Or />
-                  <Button
-                    secondary
-                    // style={{ marginTop: "1.5em" }}
-                    size="large"
-                    // icon="arrow right"
-                    content="About"
-                    // labelPosition="right"
-                    // href={buttonUrl}
-                  />
-                </Button.Group>
-              </div>
+              <Button
+                secondary
+                style={{ marginTop: "1.5em", color: "white" }}
+                size="large"
+                icon="arrow right"
+                content="See My Work"
+                labelPosition="right"
+                href={buttonUrl}
+              />
             )}
           </Header.Content>
         </Header>

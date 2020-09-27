@@ -157,20 +157,23 @@ const Projects = () => {
                 />
               </Segment>
               <div style={containerStyle}>
-                <Button
-                  primary
-                  size="large"
-                  content="View App"
-                  icon="eye"
-                  labelPosition="left"
-                />
-                <Button
-                  secondary
-                  size="large"
-                  content="Github Repo"
-                  icon="github"
-                  labelPosition="left"
-                />
+                <Button.Group>
+                  <Button
+                    primary
+                    size="large"
+                    content="View App"
+                    icon="eye"
+                    labelPosition="left"
+                  />
+                  <Button.Or />
+                  <Button
+                    secondary
+                    size="large"
+                    content="Github Repo"
+                    icon="github"
+                    labelPosition="right"
+                  />
+                </Button.Group>
               </div>
             </Item.Content>
           </Item>
