@@ -104,12 +104,14 @@ const Navigation = () => {
             }}
           />
         </Menu.Item>
-        <Menu.Item>
-          <Dropdown
-            simple
-            icon="github"
-            options={friendOptions}
-            defaultValue={null}
+        <Menu.Item href="http://github.com/coderguy614" target="_blank">
+          <Icon
+            name="github"
+            size="large"
+            style={{
+              marginRight: "0px !important",
+              color: "black",
+            }}
           />
         </Menu.Item>
       </Menu.Menu>
