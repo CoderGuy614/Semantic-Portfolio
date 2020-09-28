@@ -1,6 +1,11 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
-import { loadRepos, loadUser } from "../../apiCore";
+import {
+  loadRepos,
+  loadUser,
+  loadCodewarsUser,
+  loadCodewarsChallenges,
+} from "../../apiCore";
 import Moment from "react-moment";
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/PageHeader";
@@ -29,6 +34,25 @@ const carouselContainerStyle = {
 const Home = () => {
   const [repos, setRepos] = useState([]);
   const [user, setUser] = useState({});
+  const [codewarsUser, setCodewarsUser] = useState({
+    ranks: {
+      overall: {},
+      languages: {},
+    },
+    codeChallenges: {},
+  });
+
+  const paginate = (data, page, perPage) => {
+    return data.filter((element, index) => {
+      const upper = page * perPage;
+      const lower = page * perPage - perPage;
+      return index < upper && index > lower;
+    });
+  };
+
+  const [codewarsChallenges, setCodewarsChallenges] = useState([]);
+  const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(4);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -37,6 +61,12 @@ const Home = () => {
       .catch((err) => setError(err));
     loadUser()
       .then((usr) => setUser(usr))
+      .catch((err) => setError(err));
+    loadCodewarsUser()
+      .then((usr) => setCodewarsUser(usr))
+      .catch((err) => setError(err));
+    loadCodewarsChallenges()
+      .then((chal) => setCodewarsChallenges(chal.data))
       .catch((err) => setError(err));
   }, []);
 
@@ -64,9 +94,8 @@ const Home = () => {
                 Not your average web developer...
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                We can give your company superpowers to do things that they
-                never thought possible. Let us delight your customers and
-                empower your needs... through pure data analytics.
+                Dream it, design it, build it, break it, then start build it
+                again better.
               </p>
             </Grid.Row>
           </Grid.Column>
@@ -75,11 +104,11 @@ const Home = () => {
           </Grid.Column>
         </Grid>
       </Segment>
-
+      {/* Github Section */}
       <Container style={{ padding: "2em 0em" }}>
         <Grid celled="internally" stackable>
           <Grid.Row>
-            <Grid.Column width={10}>
+            <Grid.Column width={8}>
               <Header as="h1" className="primaryColor">
                 <Icon name="github square" size="large" />
                 GitHub Profile & Repos
@@ -111,7 +140,7 @@ const Home = () => {
               </Item.Group>
 
               <Header as="h3" style={{ fontSize: "2em" }}>
-                Recent Github Repos...
+                Recent Github Commits...
               </Header>
               <Item.Group divided>
                 {repos.map((rep) => (
@@ -150,25 +179,88 @@ const Home = () => {
                 primary
               />
             </Grid.Column>
-            <Grid.Column width={6}>
-              <Item>
-                <Item.Image src={"https://picsum.photos/200/300"} />
-                <Item.Content>
-                  <Item.Header>USER HEADER</Item.Header>
-                  <Item.Description>USER DESCRIPTION</Item.Description>
-                  <Item.Extra>
-                    <Button target="_blank" primary>
-                      View Profile{" "}
-                      <Icon
-                        name="github square"
-                        size="large"
-                        color="black"
-                        style={{ marginLeft: "5px" }}
-                      />
-                    </Button>
-                  </Item.Extra>
-                </Item.Content>
-              </Item>
+
+            {/* CodeWars Section */}
+
+            <Grid.Column width={8}>
+              <Header as="h1" className="primaryColor">
+                <Icon name="code" size="large" />
+                CodeWars Profile
+              </Header>
+
+              <Item.Group>
+                <Item>
+                  <Item.Image
+                    circular
+                    size="small"
+                    src={require("../../img/tech-icons/codewars.jpeg")}
+                  />
+                  <Item.Content verticalAlign="middle">
+                    <Item.Header>{codewarsUser.username}</Item.Header>
+                    <Item.Meta>Honor: {codewarsUser.honor}</Item.Meta>
+                    <Item.Description>
+                      Rank: {codewarsUser.ranks.overall.name}
+                    </Item.Description>
+                    <Item.Description>
+                      Challenges Completed:
+                      {codewarsUser.codeChallenges.totalCompleted}
+                    </Item.Description>
+                    <Item.Extra>
+                      <Button
+                        href="https://codewars.com"
+                        target="_blank"
+                        primary
+                      >
+                        Go to CodeWars{" "}
+                        <Icon
+                          name="arrow right"
+                          size="large"
+                          color="black"
+                          style={{ marginLeft: "5px" }}
+                        />
+                      </Button>
+                    </Item.Extra>
+                  </Item.Content>
+                </Item>
+              </Item.Group>
+
+              <Header as="h3" style={{ fontSize: "2em" }}>
+                Completed Kata...
+              </Header>
+              <Item.Group divided>
+                {codewarsChallenges &&
+                  paginate(codewarsChallenges, page, perPage).map((chal) => (
+                    <Item>
+                      <Icon name="node" />
+                      <Item.Content>
+                        <Item.Header as="a">Name: {chal.name}</Item.Header>
+                        <Item.Description>
+                          Language: {chal.completedLanguages[0]}
+                        </Item.Description>
+                        <Item.Meta>
+                          Completed On:{" "}
+                          <Moment format="LLL">{chal.completed_at}</Moment>
+                        </Item.Meta>
+
+                        <Item.Extra>
+                          <Button
+                            href={`https://codewars.com/kata/${chal.slug}`}
+                            target="_blank"
+                            secondary
+                          >
+                            View This Challenge{" "}
+                            <Icon
+                              name="arrow right"
+                              size="large"
+                              color="black"
+                              style={{ marginLeft: "5px" }}
+                            />
+                          </Button>
+                        </Item.Extra>
+                      </Item.Content>
+                    </Item>
+                  ))}
+              </Item.Group>
             </Grid.Column>
           </Grid.Row>
         </Grid>
