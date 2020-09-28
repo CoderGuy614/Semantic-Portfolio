@@ -1,7 +1,8 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
+import axios from "axios";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/PageHeader";
 import Footer from "../../components/Footer";
 import CardCarousel from "../../components/CardCarouselFeatured/CardCarousel";
@@ -23,7 +24,30 @@ const carouselContainerStyle = {
   justifyContent: "center",
 };
 
+const githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+const githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
+
 const Home = () => {
+  const [repos, setRepos] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    loadRepos();
+  }, []);
+
+  const loadRepos = async () => {
+    try {
+      const res = await axios.get(
+        `https://api.github.com/users/coderguy614/repos?per_page=5&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
+      );
+      if (res.data) {
+        setRepos(res.data);
+      }
+    } catch (error) {
+      setError(error);
+    }
+  };
+
   return (
     <div>
       <PageHeader
