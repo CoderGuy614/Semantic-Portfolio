@@ -144,7 +144,7 @@ const Home = () => {
               </Header>
               <Item.Group divided>
                 {repos.map((rep) => (
-                  <Item>
+                  <Item key={rep.id}>
                     <Icon name="github" />
                     <Item.Content>
                       <Item.Header as="a">{rep.name}</Item.Header>
@@ -198,9 +198,9 @@ const Home = () => {
                   <Item.Content verticalAlign="middle">
                     <Item.Header>{codewarsUser.username}</Item.Header>
                     <Item.Meta>Honor: {codewarsUser.honor}</Item.Meta>
-                    <Item.Description>
+                    {/* <Item.Description>
                       Rank: {codewarsUser.ranks.overall.name}
-                    </Item.Description>
+                    </Item.Description> */}
                     <Item.Description>
                       Challenges Completed:
                       {codewarsUser.codeChallenges.totalCompleted}
@@ -230,8 +230,8 @@ const Home = () => {
               <Item.Group divided>
                 {codewarsChallenges &&
                   paginate(codewarsChallenges, page, perPage).map((chal) => (
-                    <Item>
-                      <Icon name="node" />
+                    <Item key={chal.id}>
+                      <Icon name="code" />
                       <Item.Content>
                         <Item.Header as="a">Name: {chal.name}</Item.Header>
                         <Item.Description>
@@ -239,7 +239,7 @@ const Home = () => {
                         </Item.Description>
                         <Item.Meta>
                           Completed On:{" "}
-                          <Moment format="LLL">{chal.completed_at}</Moment>
+                          <Moment format="LLL">{chal.completedAt}</Moment>
                         </Item.Meta>
 
                         <Item.Extra>
