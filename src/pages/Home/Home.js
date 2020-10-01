@@ -45,16 +45,16 @@ const Home = () => {
 
   const paginate = (data, page, perPage) => {
     return data.filter((element, index) => {
-      const upper = page * perPage;
+      const upper = page * perPage - 1;
       const lower = page * perPage - perPage;
-      return index < upper && index > lower;
+      return index <= upper && index >= lower;
     });
   };
 
   const [codewarsChallenges, setCodewarsChallenges] = useState([]);
   const [ghPage, setGhPage] = useState(1);
   const [cwPage, setCwPage] = useState(1);
-  const [perPage, setPerPage] = useState(4);
+  const [perPage, setPerPage] = useState(3);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -72,7 +72,8 @@ const Home = () => {
       .catch((err) => setError(err));
   }, []);
 
-  const handlePageChange = (e, data) => setGhPage(data.activePage);
+  const handlePageChange = (e, data, type) =>
+    type === "gh" ? setGhPage(data.activePage) : setCwPage(data.activePage);
 
   return (
     <div>
@@ -144,7 +145,7 @@ const Home = () => {
               </Item.Group>
 
               <Header as="h3" style={{ fontSize: "2em" }}>
-                Recent Github Commits...
+                Github Repositories...
               </Header>
               <Item.Group divided>
                 {repos &&
@@ -174,13 +175,13 @@ const Home = () => {
                     </Item>
                   ))}
               </Item.Group>
-
+              <p style={{ marginTop: "1em" }}>View More Repos...</p>
               <Pagination
                 activePage={ghPage}
-                style={{ maxWidth: "100%", margin: "1em" }}
-                totalPages={Math.ceil(repos.length / (perPage - 1))}
+                style={{ maxWidth: "100%", marginBottom: "1em" }}
+                totalPages={Math.ceil(repos.length / perPage)}
                 boundaryRange={0}
-                onPageChange={(e, data) => handlePageChange(e, data)}
+                onPageChange={(e, data) => handlePageChange(e, data, "gh")}
               />
 
               <Button
@@ -275,6 +276,14 @@ const Home = () => {
                     </Item>
                   ))}
               </Item.Group>
+              <p style={{ marginTop: "1em" }}>View More Kata...</p>
+              <Pagination
+                activePage={cwPage}
+                style={{ maxWidth: "100%", marginBottom: "1em" }}
+                totalPages={Math.ceil(codewarsChallenges.length / perPage)}
+                boundaryRange={0}
+                onPageChange={(e, data) => handlePageChange(e, data, "cw")}
+              />
             </Grid.Column>
           </Grid.Row>
         </Grid>
