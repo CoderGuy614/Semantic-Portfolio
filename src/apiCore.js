@@ -7,7 +7,7 @@ const codewarsKey = process.env.REACT_APP_CODEWARS_KEY;
 export const loadRepos = async () => {
   try {
     const res = await axios.get(
-      `https://api.github.com/users/coderguy614/repos?per_page=3&sort=updated:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
+      `https://api.github.com/users/coderguy614/repos?&sort=updated:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
     );
     if (res.data) {
       return res.data;

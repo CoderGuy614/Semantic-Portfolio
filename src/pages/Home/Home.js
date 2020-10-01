@@ -23,6 +23,7 @@ import {
   Item,
   Segment,
   Icon,
+  Pagination,
 } from "semantic-ui-react";
 
 const carouselContainerStyle = {
@@ -51,7 +52,8 @@ const Home = () => {
   };
 
   const [codewarsChallenges, setCodewarsChallenges] = useState([]);
-  const [page, setPage] = useState(1);
+  const [ghPage, setGhPage] = useState(1);
+  const [cwPage, setCwPage] = useState(1);
   const [perPage, setPerPage] = useState(4);
   const [error, setError] = useState(null);
 
@@ -69,6 +71,8 @@ const Home = () => {
       .then((chal) => setCodewarsChallenges(chal.data))
       .catch((err) => setError(err));
   }, []);
+
+  const handlePageChange = (e, data) => setGhPage(data.activePage);
 
   return (
     <div>
@@ -143,32 +147,42 @@ const Home = () => {
                 Recent Github Commits...
               </Header>
               <Item.Group divided>
-                {repos.map((rep) => (
-                  <Item key={rep.id}>
-                    <Icon name="github" />
-                    <Item.Content>
-                      <Item.Header as="a">{rep.name}</Item.Header>
-                      <Item.Description>{rep.description}</Item.Description>
-                      <Item.Meta>
-                        Last Updated:{" "}
-                        <Moment format="LLL">{rep.updated_at}</Moment>
-                      </Item.Meta>
+                {repos &&
+                  paginate(repos, ghPage, perPage).map((rep) => (
+                    <Item key={rep.id}>
+                      <Icon name="github" />
+                      <Item.Content>
+                        <Item.Header as="a">{rep.name}</Item.Header>
+                        <Item.Description>{rep.description}</Item.Description>
+                        <Item.Meta>
+                          Last Updated:{" "}
+                          <Moment format="LLL">{rep.updated_at}</Moment>
+                        </Item.Meta>
 
-                      <Item.Extra>
-                        <Button href={rep.html_url} target="_blank" secondary>
-                          View Repo{" "}
-                          <Icon
-                            name="github square"
-                            size="large"
-                            color="black"
-                            style={{ marginLeft: "5px" }}
-                          />
-                        </Button>
-                      </Item.Extra>
-                    </Item.Content>
-                  </Item>
-                ))}
+                        <Item.Extra>
+                          <Button href={rep.html_url} target="_blank" secondary>
+                            View Repo{" "}
+                            <Icon
+                              name="github square"
+                              size="large"
+                              color="black"
+                              style={{ marginLeft: "5px" }}
+                            />
+                          </Button>
+                        </Item.Extra>
+                      </Item.Content>
+                    </Item>
+                  ))}
               </Item.Group>
+
+              <Pagination
+                activePage={ghPage}
+                style={{ maxWidth: "100%", margin: "1em" }}
+                totalPages={Math.ceil(repos.length / (perPage - 1))}
+                boundaryRange={0}
+                onPageChange={(e, data) => handlePageChange(e, data)}
+              />
+
               <Button
                 as="a"
                 size="large"
@@ -198,9 +212,9 @@ const Home = () => {
                   <Item.Content verticalAlign="middle">
                     <Item.Header>{codewarsUser.username}</Item.Header>
                     <Item.Meta>Honor: {codewarsUser.honor}</Item.Meta>
-                    {/* <Item.Description>
+                    <Item.Description>
                       Rank: {codewarsUser.ranks.overall.name}
-                    </Item.Description> */}
+                    </Item.Description>
                     <Item.Description>
                       Challenges Completed:
                       {codewarsUser.codeChallenges.totalCompleted}
@@ -229,7 +243,7 @@ const Home = () => {
               </Header>
               <Item.Group divided>
                 {codewarsChallenges &&
-                  paginate(codewarsChallenges, page, perPage).map((chal) => (
+                  paginate(codewarsChallenges, cwPage, perPage).map((chal) => (
                     <Item key={chal.id}>
                       <Icon name="code" />
                       <Item.Content>

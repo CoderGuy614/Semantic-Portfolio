@@ -23,12 +23,12 @@
 }
 
 .ui.menu {
-  a.item.text-white {
+  a.item.text-white:not(.pagination) {
     color: @pageBackground;
   }
 }
 
-.ui.menu {
+.ui.menu:not(.pagination) {
   a.item {
     color: @pageBackground;
     &.active {
