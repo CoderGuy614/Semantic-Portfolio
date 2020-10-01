@@ -289,7 +289,7 @@ const Home = () => {
         </Grid>
       </Container>
 
-      <Segment style={{ padding: "0em" }} vertical>
+      {/* <Segment style={{ padding: "0em" }} vertical>
         <Grid celled="internally" columns="equal" stackable>
           <Grid.Row textAlign="center">
             <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
@@ -311,7 +311,7 @@ const Home = () => {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </Segment>
+      </Segment> */}
 
       <Footer />
     </div>

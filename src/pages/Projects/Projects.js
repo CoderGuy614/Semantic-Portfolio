@@ -6,10 +6,12 @@ import {
   Divider,
   Icon,
   Segment,
-  Button,
+  Header,
+  List,
 } from "semantic-ui-react";
 import CardCarouselProject from "./CardCarouselProject/CardCarouselProject";
 import PageHeader from "../../components/PageHeader";
+import DoubleButton from "./DoubleButton";
 import Footer from "../../components/Footer";
 
 const localBizImages = [
@@ -84,6 +86,11 @@ const containerStyle = {
   padding: "5px",
 };
 
+const flexCenter = {
+  display: "flex",
+  justifyContent: "center",
+};
+
 const itemStyle = {
   margin: "20px 0px",
 };
@@ -110,8 +117,6 @@ const Projects = () => {
         img="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
         mainText="Projects"
         subText="Check out Some of My Work"
-        buttonText="Contact Me"
-        buttonUrl="/contact"
       />
       <Container style={{ position: "relative" }}>
         <Item.Group style={{ position: "relative" }}>
@@ -156,24 +161,31 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mongo.png")}
                 />
               </Segment>
-              <div style={containerStyle}>
-                <Button.Group>
-                  <Button
-                    primary
-                    size="large"
-                    content="View App"
-                    icon="eye"
-                    labelPosition="left"
-                  />
-                  <Button.Or />
-                  <Button
-                    secondary
-                    size="large"
-                    content="Github Repo"
-                    icon="github"
-                    labelPosition="right"
-                  />
-                </Button.Group>
+              <Header as="h3" content="Favorite Features:" />
+              <List bulleted>
+                <List.Item>
+                  <List.Header>User authentication</List.Header>
+                  Users can Sign Up and Login with either Email or Facebook
+                </List.Item>
+                <List.Item>
+                  <List.Header>Message Center</List.Header>
+                  Users can chat about items for sale using the custom message
+                  center
+                </List.Item>
+                <List.Item>
+                  <List.Header>Location Picker</List.Header>A business owner can
+                  set their Map location with the custom picker tool
+                </List.Item>
+                <List.Item>
+                  <List.Header>Form Validation</List.Header>All forms use React
+                  + Formik to provide custom validation and feedback to the user
+                </List.Item>
+              </List>
+              <div style={flexCenter}>
+                <DoubleButton
+                  appUrl="https://localbiz-siem-reap.herokuapp.com/"
+                  githubUrl="https://github.com/CoderGuy614/LocalBiz"
+                />
               </div>
             </Item.Content>
           </Item>
@@ -230,20 +242,30 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mongo.png")}
                 />
               </Segment>
-              <div style={containerStyle}>
-                <Button
-                  primary
-                  size="large"
-                  content="View App"
-                  icon="eye"
-                  labelPosition="left"
-                />
-                <Button
-                  secondary
-                  size="large"
-                  content="Github Repo"
-                  icon="github"
-                  labelPosition="left"
+              <Header as="h3" content="Favorite Features:" />
+              <List bulleted>
+                <List.Item>
+                  <List.Header>User authentication</List.Header>
+                  Users can Sign Up and Login with either Email or Facebook
+                </List.Item>
+                <List.Item>
+                  <List.Header>Message Center</List.Header>
+                  Users can chat about items for sale using the custom message
+                  center
+                </List.Item>
+                <List.Item>
+                  <List.Header>Location Picker</List.Header>A business owner can
+                  set their Map location with the custom picker tool
+                </List.Item>
+                <List.Item>
+                  <List.Header>Form Validation</List.Header>All forms use React
+                  + Formik to provide custom validation and feedback to the user
+                </List.Item>
+              </List>
+              <div style={flexCenter}>
+                <DoubleButton
+                  appUrl="https://veggieking.herokuapp.com/"
+                  githubUrl="https://github.com/CoderGuy614/VeggieKing"
                 />
               </div>
             </Item.Content>
@@ -281,7 +303,7 @@ const Projects = () => {
                 />
                 <Image
                   style={iconStyleS}
-                  src={require("../../img/tech-icons/redux.png")}
+                  src={require("../../img/tech-icons/redux2.png")}
                 />
 
                 <Image
@@ -289,20 +311,10 @@ const Projects = () => {
                   src={require("../../img/tech-icons/cloudinary.png")}
                 />
               </Segment>
-              <div style={containerStyle}>
-                <Button
-                  primary
-                  size="large"
-                  content="View App"
-                  icon="eye"
-                  labelPosition="left"
-                />
-                <Button
-                  secondary
-                  size="large"
-                  content="Github Repo"
-                  icon="github"
-                  labelPosition="left"
+              <div style={flexCenter}>
+                <DoubleButton
+                  appUrl="https://real-estate-client.herokuapp.com/"
+                  githubUrl="https://github.com/CoderGuy614/real-estate-client"
                 />
               </div>
             </Item.Content>
@@ -356,20 +368,10 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mongo.png")}
                 />
               </Segment>
-              <div style={containerStyle}>
-                <Button
-                  primary
-                  size="large"
-                  content="View App"
-                  icon="eye"
-                  labelPosition="left"
-                />
-                <Button
-                  secondary
-                  size="large"
-                  content="Github Repo"
-                  icon="github"
-                  labelPosition="left"
+              <div style={flexCenter}>
+                <DoubleButton
+                  appUrl="https://coderguy614.github.io/CamboCraft/"
+                  githubUrl="https://github.com/CoderGuy614/CamboCraft"
                 />
               </div>
             </Item.Content>
@@ -397,16 +399,16 @@ const Projects = () => {
               <Item.Extra>Technologies used:</Item.Extra>
               <Segment compact style={containerStyle}>
                 <Image
-                  style={iconStyleXS}
+                  style={iconStyleS}
                   src={require("../../img/tech-icons/react2.jpg")}
                 />
                 <Image
                   style={iconStyleS}
-                  src={require("../../img/tech-icons/redux.png")}
+                  src={require("../../img/tech-icons/redux2.png")}
                 />
                 <Image
-                  style={iconStyleS}
-                  src={require("../../img/tech-icons/firebase.png")}
+                  style={iconStyleM}
+                  src={require("../../img/tech-icons/firebase2.png")}
                 />
                 <Image
                   style={iconStyleS}
@@ -417,20 +419,10 @@ const Projects = () => {
                   src={require("../../img/tech-icons/sass.png")}
                 />
               </Segment>
-              <div style={containerStyle}>
-                <Button
-                  primary
-                  size="large"
-                  content="View App"
-                  icon="eye"
-                  labelPosition="left"
-                />
-                <Button
-                  secondary
-                  size="large"
-                  content="Github Repo"
-                  icon="github"
-                  labelPosition="left"
+              <div style={flexCenter}>
+                <DoubleButton
+                  appUrl="https://jtl-clothing-shop.herokuapp.com/"
+                  githubUrl="https://github.com/CoderGuy614/React-Clothing-Shop"
                 />
               </div>
             </Item.Content>
@@ -482,20 +474,10 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mysql.png")}
                 />
               </Segment>
-              <div style={containerStyle}>
-                <Button
-                  primary
-                  size="large"
-                  content="View App"
-                  icon="eye"
-                  labelPosition="left"
-                />
-                <Button
-                  secondary
-                  size="large"
-                  content="Github Repo"
-                  icon="github"
-                  labelPosition="left"
+              <div style={flexCenter}>
+                <DoubleButton
+                  appUrl="https://spotify-client-jlutz.herokuapp.com/"
+                  githubUrl="https://github.com/CoderGuy614/07-Spotify-Client"
                 />
               </div>
             </Item.Content>
@@ -552,20 +534,10 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mysql.png")}
                 />
               </Segment>
-              <div style={containerStyle}>
-                <Button
-                  primary
-                  size="large"
-                  content="View App"
-                  icon="eye"
-                  labelPosition="left"
-                />
-                <Button
-                  secondary
-                  size="large"
-                  content="Github Repo"
-                  icon="github"
-                  labelPosition="left"
+              <div style={flexCenter}>
+                <DoubleButton
+                  appUrl="https://airbnb-client-jonnylutz.herokuapp.com/"
+                  githubUrl="https://github.com/CoderGuy614/04-airbnb-client"
                 />
               </div>
             </Item.Content>
