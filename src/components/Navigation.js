@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Container, Menu, Icon, Dropdown, Button } from "semantic-ui-react";
+import { Container, Menu, Icon } from "semantic-ui-react";
 
 const friendOptions = [
   { text: "", value: "" },
@@ -87,14 +87,20 @@ const Navigation = () => {
       </Container>
 
       <Menu.Menu position="right" style={socialMenuStyle}>
-        <Menu.Item href="http://facebook.com" target="_blank">
+        <Menu.Item
+          href="https://www.facebook.com/people/Jonny-Lutz/12450996"
+          target="_blank"
+        >
           <Icon
             name="facebook"
             style={{ marginRight: "0px !important", color: "#4267B2" }}
             size="large"
           />
         </Menu.Item>
-        <Menu.Item href="http://linkedin.com" target="_blank">
+        <Menu.Item
+          href="https://www.linkedin.com/in/jonathan-tyler-lutz/"
+          target="_blank"
+        >
           <Icon
             name="linkedin"
             size="large"
