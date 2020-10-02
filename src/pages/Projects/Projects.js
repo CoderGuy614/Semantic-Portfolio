@@ -174,7 +174,7 @@ const Projects = () => {
                 </List.Item>
                 <List.Item>
                   <List.Header>Location Picker</List.Header>A business owner can
-                  set their Map location with the custom picker tool
+                  set their map location with the custom picker tool
                 </List.Item>
                 <List.Item>
                   <List.Header>Form Validation</List.Header>All forms use React
@@ -207,12 +207,9 @@ const Projects = () => {
                   local business often had difficulty communicating with
                   customers about their products, price and delivery. This MERN
                   stack application was created to help them improve their
-                  operations. It has a React / Material UI responsive front-end,
-                  JsonWebToken for user authentication, Nodemailer for email
-                  confirmations, and a custom built-in chat feature. Shop admins
-                  can view their open orders, easily modify their product list,
-                  chat with customers, and view all of their customer profile
-                  data at a glance.
+                  operations. Shop admins can view their open orders, easily
+                  modify their product list, chat with customers, and view all
+                  of their customer profile data at a glance.
                 </p>
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
@@ -246,20 +243,22 @@ const Projects = () => {
               <List bulleted>
                 <List.Item>
                   <List.Header>User authentication</List.Header>
-                  Users can Sign Up and Login with either Email or Facebook
+                  JSON Web Token (JWT) user authentication system
                 </List.Item>
                 <List.Item>
                   <List.Header>Message Center</List.Header>
-                  Users can chat about items for sale using the custom message
-                  center
+                  Buyers and sellers can chat and users are notified of unread
+                  messages
                 </List.Item>
                 <List.Item>
-                  <List.Header>Location Picker</List.Header>A business owner can
-                  set their Map location with the custom picker tool
+                  <List.Header>MaterialUI Components</List.Header>The front-end
+                  was built with MaterialUI, including the custom editable table
+                  component
                 </List.Item>
                 <List.Item>
-                  <List.Header>Form Validation</List.Header>All forms use React
-                  + Formik to provide custom validation and feedback to the user
+                  <List.Header>Email Order Confirmation</List.Header>The
+                  NodeMailer package was used to send email confirmations to
+                  users
                 </List.Item>
               </List>
               <div style={flexCenter}>
@@ -282,13 +281,10 @@ const Projects = () => {
               <Item.Meta>Real Estate Listings</Item.Meta>
               <Item.Description>
                 <p>
-                  This responsive real estate app uses a Strapi Headless CMS
-                  back-end, and React-Bootstrap on the front end. Images are
-                  hosted by Cloudinary. The app uses Redux to allow users to add
-                  and remove favorites from multiple components, and
-                  Redux-Persist for data peristence with local storage. Google
-                  Maps is integrated to show each home's location, and users can
-                  filters the homes based on multiple criteria simulataneously.
+                  This responsive real estate listing app uses a Strapi Headless
+                  CMS back-end, and React-Bootstrap on the front end. Users can
+                  browse property listings by map location or filter listings by
+                  multiple criteria.
                 </p>
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
@@ -311,6 +307,29 @@ const Projects = () => {
                   src={require("../../img/tech-icons/cloudinary.png")}
                 />
               </Segment>
+              <Header as="h3" content="Favorite Features:" />
+              <List bulleted>
+                <List.Item>
+                  <List.Header>Redux + LocalStorage</List.Header>
+                  React + Redux is used to manage the global "Favorited" homes
+                  state, as well as alert messages. Browser local storage is
+                  used so that users don't need to login to add a home to their
+                  favorites
+                </List.Item>
+                <List.Item>
+                  <List.Header>Strapi + Cloudinary Back-End</List.Header>
+                  API endpoints were generated using the Strapi headless CMS and
+                  the home images are hosted by Cloudinary. This was done in
+                  order to permit non-programmers to add / modify homes to the
+                  database easily using the Strapi UI
+                </List.Item>
+
+                <List.Item>
+                  <List.Header>Custom Filters</List.Header>Users can filter
+                  listings by multiple criteria at the same time, such as
+                  bedrooms, home type and max price
+                </List.Item>
+              </List>
               <div style={flexCenter}>
                 <DoubleButton
                   appUrl="https://real-estate-client.herokuapp.com/"
@@ -334,11 +353,7 @@ const Projects = () => {
                 <p>
                   This goal of this project was to provide a means for a local
                   Cambodian artist to display and sell her handmade clothing to
-                  potential customers. The front end was built with ReactJS and
-                  the Materialize CSS library to add some cool features like
-                  toasts and modals. My favorite feature is the use of clickable
-                  SVG icons that filter the products by type and change color
-                  when clicked.
+                  potential customers.
                 </p>
               </Item.Description>
               <Item.Extra>Technologies used:</Item.Extra>
@@ -368,6 +383,25 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mongo.png")}
                 />
               </Segment>
+              <Header as="h3" content="Favorite Features:" />
+              <List bulleted>
+                <List.Item>
+                  <List.Header>React + Materialize CSS Front End</List.Header>
+                  The Materialize CSS libarary was used to add some cool
+                  features like toasts and modals, as well as for responsiveness
+                </List.Item>
+                <List.Item>
+                  <List.Header>Custom SVG Filter Images</List.Header>
+                  Custom color changing SVG images were used for the product
+                  type filters. Multiple types can selected at once
+                </List.Item>
+
+                <List.Item>
+                  <List.Header>Email Order Confirmation</List.Header>NodeMailer
+                  was used to send custom email order confirmations to both the
+                  customer as well as the vendor
+                </List.Item>
+              </List>
               <div style={flexCenter}>
                 <DoubleButton
                   appUrl="https://coderguy614.github.io/CamboCraft/"
@@ -419,6 +453,29 @@ const Projects = () => {
                   src={require("../../img/tech-icons/sass.png")}
                 />
               </Segment>
+              <Header as="h3" content="Favorite Features:" />
+              <List bulleted>
+                <List.Item>
+                  <List.Header>React + SASS Front End</List.Header>
+                  Styling was done using a custom SCSS file associated with each
+                  React component
+                </List.Item>
+                <List.Item>
+                  <List.Header>Google Firebase Integration</List.Header>
+                  User authentication is performed using Google Firebase and
+                  allows users to sign in with Google
+                </List.Item>
+
+                <List.Item>
+                  <List.Header>Redux Global State Management</List.Header> The
+                  cart items are stored in global state using React + Redux
+                </List.Item>
+                <List.Item>
+                  <List.Header>Stripe Payment Processing</List.Header> A Stripe
+                  account and payment form is connected to the app for handling
+                  payments
+                </List.Item>
+              </List>
               <div style={flexCenter}>
                 <DoubleButton
                   appUrl="https://jtl-clothing-shop.herokuapp.com/"
@@ -474,6 +531,29 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mysql.png")}
                 />
               </Segment>
+              <Header as="h3" content="Favorite Features:" />
+              <List bulleted>
+                <List.Item>
+                  <List.Header>Howl Audio Player Package</List.Header>
+                  The Howl Package allows the song files to be played through
+                  the app
+                </List.Item>
+                <List.Item>
+                  <List.Header>SQL Database</List.Header>
+                  Songs are associated with one another by Artist, Album and
+                  Genre using an SQL database
+                </List.Item>
+                <List.Item>
+                  <List.Header>Stripe Payment Processing</List.Header> A Stripe
+                  account and payment form is connected to the app for handling
+                  payments
+                </List.Item>
+
+                <List.Item>
+                  <List.Header>No Frameworks!</List.Header> The responsive UI is
+                  built with only HTML5 and CSS3
+                </List.Item>
+              </List>
               <div style={flexCenter}>
                 <DoubleButton
                   appUrl="https://spotify-client-jlutz.herokuapp.com/"
@@ -534,6 +614,24 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mysql.png")}
                 />
               </Segment>
+
+              <Header as="h3" content="Favorite Features:" />
+              <List bulleted>
+                <List.Item>
+                  <List.Header>SQL Database</List.Header>
+                  Homes are associated with a host user and a set of reviews
+                  using an SQL database
+                </List.Item>
+                <List.Item>
+                  <List.Header>Google Maps Integration</List.Header> The home
+                  location is shown on a custom Google map and the corresponding
+                  pin is highlighted on hover
+                </List.Item>
+                <List.Item>
+                  <List.Header>No Frameworks!</List.Header> The responsive UI is
+                  built with only HTML5 and CSS3
+                </List.Item>
+              </List>
               <div style={flexCenter}>
                 <DoubleButton
                   appUrl="https://airbnb-client-jonnylutz.herokuapp.com/"
