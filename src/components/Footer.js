@@ -1,38 +1,79 @@
 import React from "react";
 import { Container, Header, Segment, Grid, List } from "semantic-ui-react";
+import ContactForm from "./ContactForm";
 
 const Footer = () => {
   return (
-    <Segment inverted vertical style={{ padding: "5em 0em" }}>
+    <Segment inverted vertical style={{ padding: "3em 0em" }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted as="h4" content="About" />
+              <Header inverted as="h4" content="Quick Links" />
               <List link inverted>
-                <List.Item as="a">Sitemap</List.Item>
-                <List.Item as="a">Contact Us</List.Item>
-                <List.Item as="a">Religious Ceremonies</List.Item>
-                <List.Item as="a">Gazebo Plans</List.Item>
+                <List.Item as="a" href="/">
+                  Home
+                </List.Item>
+                <List.Item as="a" href="/projects">
+                  Projects
+                </List.Item>
+                <List.Item as="a" href="/about">
+                  About
+                </List.Item>
+                <List.Item as="a" href="/contact">
+                  Contact
+                </List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
-              <Header inverted as="h4" content="Services" />
+              <Header inverted as="h4" content="Projects" />
               <List link inverted>
-                <List.Item as="a">Banana Pre-Order</List.Item>
-                <List.Item as="a">DNA FAQ</List.Item>
-                <List.Item as="a">How To Access</List.Item>
-                <List.Item as="a">Favorite X-Men</List.Item>
+                <List.Item
+                  as="a"
+                  href="https://localbiz-siem-reap.herokuapp.com/"
+                >
+                  LocalBiz
+                </List.Item>
+                <List.Item as="a" href="https://veggieking.herokuapp.com/">
+                  VeggieKing
+                </List.Item>
+                <List.Item
+                  as="a"
+                  href="https://real-estate-client.herokuapp.com/"
+                >
+                  Real Estate
+                </List.Item>
+                <List.Item
+                  as="a"
+                  href="https://coderguy614.github.io/CamboCraft/"
+                >
+                  CamboCraft Clothing
+                </List.Item>
+                <List.Item
+                  as="a"
+                  href="https://jtl-clothing-shop.herokuapp.com/"
+                >
+                  E-Commerce Store
+                </List.Item>
+                <List.Item
+                  as="a"
+                  href="https://spotify-client-jlutz.herokuapp.com/"
+                >
+                  Spotify Music
+                </List.Item>
+                <List.Item
+                  as="a"
+                  href="https://airbnb-client-jonnylutz.herokuapp.com/"
+                >
+                  AirBnB Clone
+                </List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as="h4" inverted>
-                Footer Header
+                Send a Quick Message:
               </Header>
-              <p>
-                Extra space for a call to action inside the footer that could
-                help re-engage users.
-              </p>
+              <ContactForm />
             </Grid.Column>
           </Grid.Row>
         </Grid>

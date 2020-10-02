@@ -59,6 +59,8 @@ const camboCraftImages = [
   require("../../img/projects/CamboCraft/project_2_4.png"),
   require("../../img/projects/CamboCraft/project_2_5.png"),
   require("../../img/projects/CamboCraft/project_2_6.png"),
+  require("../../img/projects/CamboCraft/project_2_7.png"),
+  require("../../img/projects/CamboCraft/project_2_8.png"),
 ];
 
 const eCommerceImages = [
@@ -71,18 +73,19 @@ const eCommerceImages = [
 ];
 
 const spotifyImages = [
-  require("../../img/projects/Spotify/project_4_1.jpg"),
-  require("../../img/projects/Spotify/project_4_2.jpg"),
-  require("../../img/projects/Spotify/project_4_3.jpg"),
-  require("../../img/projects/Spotify/project_4_4.jpg"),
-  require("../../img/projects/Spotify/project_4_5.jpg"),
+  require("../../img/projects/Spotify/project_4_1.png"),
+  require("../../img/projects/Spotify/project_4_2.png"),
+  require("../../img/projects/Spotify/project_4_3.png"),
+  require("../../img/projects/Spotify/project_4_4.png"),
+  require("../../img/projects/Spotify/project_4_5.png"),
 ];
 
 const airBnbImages = [
-  require("../../img/projects/AirBnB/project_3_1.jpg"),
-  require("../../img/projects/AirBnB/project_3_2.jpg"),
-  require("../../img/projects/AirBnB/project_3_3.jpg"),
-  require("../../img/projects/AirBnB/project_3_4.jpg"),
+  require("../../img/projects/AirBnB/project_3_1.png"),
+  require("../../img/projects/AirBnB/project_3_2.png"),
+  require("../../img/projects/AirBnB/project_3_3.png"),
+  require("../../img/projects/AirBnB/project_3_4.png"),
+  require("../../img/projects/AirBnB/project_3_4.png"),
 ];
 
 const containerStyle = {
