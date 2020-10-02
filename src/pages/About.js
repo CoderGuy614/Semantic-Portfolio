@@ -11,6 +11,7 @@ const About = () => {
         mainText="About"
         subText="All About Me"
       />
+      <h1> This Section Coming Soon!</h1>
       <Footer />
     </div>
   );
