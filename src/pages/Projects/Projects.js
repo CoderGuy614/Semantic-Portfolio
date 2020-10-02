@@ -28,12 +28,18 @@ const localBizImages = [
 ];
 
 const veggieKingImages = [
+  require("../../img/projects/VeggieKing/project_1_1.png"),
   require("../../img/projects/VeggieKing/project_1_2.png"),
   require("../../img/projects/VeggieKing/project_1_3.png"),
   require("../../img/projects/VeggieKing/project_1_4.png"),
   require("../../img/projects/VeggieKing/project_1_5.png"),
   require("../../img/projects/VeggieKing/project_1_6.png"),
   require("../../img/projects/VeggieKing/project_1_7.png"),
+  require("../../img/projects/VeggieKing/project_1_8.png"),
+  require("../../img/projects/VeggieKing/project_1_9.png"),
+  require("../../img/projects/VeggieKing/project_1_10.png"),
+  require("../../img/projects/VeggieKing/project_1_11.png"),
+  require("../../img/projects/VeggieKing/project_1_12.png"),
 ];
 
 const realEstateImages = [

@@ -25,16 +25,21 @@ const CardCarousel = ({ images }) => (
     style={{
       maxWidth: "500px",
       marginRight: "2em",
-      border: "2px solid #247ba0",
-      padding: "10px",
-      borderRadius: "10px",
     }}
     infinite
   >
     <Slider>
       {images.map((img, i) => (
-        <Slide key={i} tag="a" index={i}>
-          <Image src={img} />
+        <Slide
+          key={i}
+          tag="a"
+          index={i}
+          style={{
+            border: "2px solid #247ba0",
+            borderRadius: "5px",
+          }}
+        >
+          <Image src={img} style={{ padding: "5px" }} />
         </Slide>
       ))}
     </Slider>
