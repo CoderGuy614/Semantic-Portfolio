@@ -22,6 +22,7 @@ import {
   Segment,
   Icon,
   Pagination,
+  List,
 } from "semantic-ui-react";
 
 const carouselContainerStyle = {
@@ -96,10 +97,23 @@ const Home = () => {
               <Header as="h3" style={{ fontSize: "2em", marginTop: "2em" }}>
                 Not your average web developer...
               </Header>
-              <p style={{ fontSize: "1.33em" }}>
-                Dream it, design it, build it, break it, then start build it
-                again better.
-              </p>
+              <Header as="h5" style={{ fontSize: "1.33em", marginTop: "2em" }}>
+                Services Offered:
+              </Header>
+              <List style={{ fontSize: "1.33em" }} bulleted>
+                <List.Item>
+                  Complete Full Stack Application Design & Development
+                </List.Item>
+                <List.Item>Custom API Design</List.Item>
+                <List.Item>NoSQL & SQL Databases</List.Item>
+                <List.Item>Responsive Website Design</List.Item>
+                <List.Item>Progressive Web Apps (PWA's) </List.Item>
+                <List.Item>Mobile Apps (React Native) </List.Item>
+                <List.Item>Custom User Interface (UI) Design</List.Item>
+                <List.Item>
+                  Project Management from Concept to Deployment
+                </List.Item>
+              </List>
             </Grid.Row>
           </Grid.Column>
           <Grid.Column floated="right" width={6}>

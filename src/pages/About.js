@@ -20,8 +20,8 @@ const About = () => {
     <div>
       <PageHeader
         img={require("../img/personal/personal4.jpg")}
-        mainText="About"
-        subText="All About Me"
+        mainText="About Me"
+        // subText="All About Me"
       />
       <Container style={containerStyle}>
         <Item.Group>
@@ -35,11 +35,16 @@ const About = () => {
               <hr />
               <Item.Header>Birthplace:</Item.Header> Columbus, Ohio USA
               <hr />
+              <Item.Header>Current City:</Item.Header> Bali, Indonesia
+              <hr />
               <Item.Header>Hobbies & Interests:</Item.Header> Travel, Scuba
               Diving, Hiking & Camping, Health & Fitness, Technology
               <hr />
-              <Item.Header>Career Goal:</Item.Header> To be the best software
-              developer that I can be.
+              <Item.Header>Favorite Quote:</Item.Header> "Code is like humor,
+              when you have to explain it, it's bad." - Cory House
+              <hr />
+              <Item.Header>Career Goal:</Item.Header> To be the best problem
+              solver that I can be.
               <hr />
             </Item.Content>
           </Item>
