@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <div>
       <PageHeader
-        img="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
+        img={require("../img/personal/personal4.jpg")}
         mainText="Contact"
         subText="Here's How to Reach Me"
       />

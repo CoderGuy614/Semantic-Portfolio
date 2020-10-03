@@ -16,10 +16,8 @@ import TechIcons from "../../components/TechIcons";
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
-  Image,
   Item,
   Segment,
   Icon,
@@ -78,7 +76,7 @@ const Home = () => {
   return (
     <div>
       <PageHeader
-        img="https://res.cloudinary.com/deduwxk82/image/upload/v1600942834/profile-pic_oubsah.jpg"
+        img={require("../../img/personal/personal4.jpg")}
         mainText="Jonny Lutz"
         subText={"Full Stack Web Developer"}
         buttonText="See My Work"
