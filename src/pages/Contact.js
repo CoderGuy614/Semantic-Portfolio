@@ -26,7 +26,7 @@ const Contact = () => {
         subText="Here's How to Reach Me"
       />
       <Container style={containerStyle}>
-        <Card.Group stackable>
+        <Card.Group centered stackable>
           <Card>
             <Card.Content>
               <Card.Header>Email:</Card.Header>
