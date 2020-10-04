@@ -134,7 +134,9 @@ const Projects = () => {
             <CardCarouselProject images={localBizImages} />
 
             <Item.Content>
-              <Item.Header as="a">LocalBiz</Item.Header>
+              <Item.Header as="a" className="mobile-stacked">
+                LocalBiz
+              </Item.Header>
               <Item.Meta>Small and Local Business Directory</Item.Meta>
               <Item.Description>
                 <p>
@@ -170,8 +172,12 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mongo.png")}
                 />
               </Segment>
-              <Header as="h3" content="Favorite Features:" />
-              <List bulleted>
+              <Header
+                as="h3"
+                content="Favorite Features:"
+                className="hide-on-tablet"
+              />
+              <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>User authentication</List.Header>
                   Users can Sign Up and Login with either Email or Facebook
@@ -207,7 +213,9 @@ const Projects = () => {
             <CardCarouselProject images={veggieKingImages} />
 
             <Item.Content>
-              <Item.Header as="a">VeggieKing</Item.Header>
+              <Item.Header as="a" className="mobile-stacked">
+                VeggieKing
+              </Item.Header>
               <Item.Meta>Food Ordering and Delivery</Item.Meta>
               <Item.Description>
                 <p>
@@ -248,8 +256,12 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mongo.png")}
                 />
               </Segment>
-              <Header as="h3" content="Favorite Features:" />
-              <List bulleted>
+              <Header
+                as="h3"
+                content="Favorite Features:"
+                className="hide-on-tablet"
+              />
+              <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>User authentication</List.Header>
                   JSON Web Token (JWT) user authentication system
@@ -286,7 +298,9 @@ const Projects = () => {
           <Item style={itemStyle}>
             <CardCarouselProject images={realEstateImages} />
             <Item.Content>
-              <Item.Header as="a">Hummell & Long Real Estate</Item.Header>
+              <Item.Header as="a" className="mobile-stacked">
+                Hummell & Long Real Estate
+              </Item.Header>
               <Item.Meta>Real Estate Listings</Item.Meta>
               <Item.Description>
                 <p>
@@ -316,8 +330,12 @@ const Projects = () => {
                   src={require("../../img/tech-icons/cloudinary.png")}
                 />
               </Segment>
-              <Header as="h3" content="Favorite Features:" />
-              <List bulleted>
+              <Header
+                as="h3"
+                content="Favorite Features:"
+                className="hide-on-tablet"
+              />
+              <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>Redux + LocalStorage</List.Header>
                   React + Redux is used to manage the global "Favorited" homes
@@ -356,7 +374,9 @@ const Projects = () => {
             <CardCarouselProject images={camboCraftImages} />
 
             <Item.Content>
-              <Item.Header as="a">CamboCraft</Item.Header>
+              <Item.Header as="a" className="mobile-stacked">
+                CamboCraft
+              </Item.Header>
               <Item.Meta>Custom Clothing Online Store</Item.Meta>
               <Item.Description>
                 <p>
@@ -392,8 +412,12 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mongo.png")}
                 />
               </Segment>
-              <Header as="h3" content="Favorite Features:" />
-              <List bulleted>
+              <Header
+                as="h3"
+                content="Favorite Features:"
+                className="hide-on-tablet"
+              />
+              <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>React + Materialize CSS Front End</List.Header>
                   The Materialize CSS libarary was used to add some cool
@@ -428,7 +452,9 @@ const Projects = () => {
             <CardCarouselProject images={eCommerceImages} />
 
             <Item.Content>
-              <Item.Header as="a">E-Commerce Shop</Item.Header>
+              <Item.Header as="a" className="mobile-stacked">
+                E-Commerce Shop
+              </Item.Header>
               <Item.Meta>Online Clothing Store</Item.Meta>
               <Item.Description>
                 <p>
@@ -462,8 +488,12 @@ const Projects = () => {
                   src={require("../../img/tech-icons/sass.png")}
                 />
               </Segment>
-              <Header as="h3" content="Favorite Features:" />
-              <List bulleted>
+              <Header
+                as="h3"
+                content="Favorite Features:"
+                className="hide-on-tablet"
+              />
+              <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>React + SASS Front End</List.Header>
                   Styling was done using a custom SCSS file associated with each
@@ -502,7 +532,9 @@ const Projects = () => {
             <CardCarouselProject images={spotifyImages} />
 
             <Item.Content>
-              <Item.Header as="a">Spotify</Item.Header>
+              <Item.Header as="a" className="mobile-stacked">
+                Spotify
+              </Item.Header>
               <Item.Meta>Music Player</Item.Meta>
               <Item.Description>
                 <p>
@@ -540,8 +572,12 @@ const Projects = () => {
                   src={require("../../img/tech-icons/mysql.png")}
                 />
               </Segment>
-              <Header as="h3" content="Favorite Features:" />
-              <List bulleted>
+              <Header
+                as="h3"
+                content="Favorite Features:"
+                className="hide-on-tablet"
+              />
+              <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>Howl Audio Player Package</List.Header>
                   The Howl Package allows the song files to be played through
@@ -581,7 +617,9 @@ const Projects = () => {
             <CardCarouselProject images={airBnbImages} />
 
             <Item.Content>
-              <Item.Header as="a">AirBnB</Item.Header>
+              <Item.Header as="a" className="mobile-stacked">
+                AirBnB
+              </Item.Header>
               <Item.Meta>Property Rental</Item.Meta>
               <Item.Description>
                 <p>
@@ -624,8 +662,12 @@ const Projects = () => {
                 />
               </Segment>
 
-              <Header as="h3" content="Favorite Features:" />
-              <List bulleted>
+              <Header
+                as="h3"
+                content="Favorite Features:"
+                className="hide-on-tablet"
+              />
+              <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>SQL Database</List.Header>
                   Homes are associated with a host user and a set of reviews

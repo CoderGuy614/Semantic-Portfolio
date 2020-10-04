@@ -43,7 +43,10 @@ const CardCarousel = ({ images }) => (
         </Slide>
       ))}
     </Slider>
-    <div style={{ display: "flex", marginTop: "15px" }}>
+    <div
+      style={{ display: "flex", justifyContent: "center", marginTop: "1em" }}
+      className="hide-on-tablet"
+    >
       <ButtonBack style={buttonStyle}>
         <Icon name="arrow left" size="large" />
       </ButtonBack>

@@ -86,7 +86,10 @@ const CardCarousel = () => (
         meta="Login with Facebook or Email & Custom Form Validation with Formik"
       />
     </Slider>
-    <div style={{ display: "flex", marginTop: "0px" }}>
+    <div
+      style={{ display: "flex", justifyContent: "center" }}
+      className="hide-on-tablet"
+    >
       <ButtonBack style={buttonStyle}>
         <Icon name="arrow left" size="large" />
       </ButtonBack>

@@ -1,5 +1,11 @@
 import React from "react";
-import { Container, Header, Image, Button } from "semantic-ui-react";
+import {
+  Container,
+  Header,
+  Image,
+  Button,
+  Visibility,
+} from "semantic-ui-react";
 
 const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
   const headerStyle = {
@@ -12,6 +18,7 @@ const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
   return (
     <Container
       fluid
+      textAlign="center"
       style={{ marginTop: "50px", height: "200px" }}
       className="primaryColor"
     >
@@ -20,7 +27,7 @@ const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
           <Image circular style={{ width: "150px" }} src={img} />{" "}
           <Header.Content>
             {mainText}
-            <Header.Subheader className="secondaryColor">
+            <Header.Subheader className="secondaryColor hide-on-mobile">
               {subText}
             </Header.Subheader>
             {buttonText && (
@@ -32,6 +39,7 @@ const PageHeader = ({ img, mainText, subText, buttonText, buttonUrl }) => {
                 content="See My Work"
                 labelPosition="right"
                 href={buttonUrl}
+                className="hide-on-mobile"
               />
             )}
           </Header.Content>
