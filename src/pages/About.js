@@ -50,7 +50,7 @@ const About = () => {
           </Item>
         </Item.Group>
 
-        <Segment textAlign="center" fluid>
+        <Segment textAlign="center">
           <Grid textAlign="center">
             {/* Start Row 1 */}
             <Grid.Row>
