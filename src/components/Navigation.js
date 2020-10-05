@@ -2,12 +2,6 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Container, Menu, Icon } from "semantic-ui-react";
 
-const friendOptions = [
-  { text: "", value: "" },
-  { text: "Option1" },
-  { text: "Option2" },
-];
-
 const socialMenuStyle = {
   display: "flex",
   justifyContent: "center",
@@ -86,7 +80,11 @@ const Navigation = () => {
         </Menu.Item>
       </Container>
 
-      <Menu.Menu position="right" style={socialMenuStyle}>
+      <Menu.Menu
+        position="right"
+        style={socialMenuStyle}
+        className="hide-on-mobile"
+      >
         <Menu.Item
           href="https://www.facebook.com/people/Jonny-Lutz/12450996"
           target="_blank"

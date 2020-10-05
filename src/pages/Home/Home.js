@@ -125,7 +125,7 @@ const Home = () => {
       <Container style={{ padding: "2em 0em" }}>
         <Grid celled="internally" stackable>
           <Grid.Row>
-            <Grid.Column width={8}>
+            <Grid.Column width={16}>
               <Header as="h1" className="primaryColor">
                 <Icon name="github square" size="large" />
                 GitHub Profile & Repos
@@ -163,8 +163,8 @@ const Home = () => {
                 {repos &&
                   paginate(repos, ghPage, perPage).map((rep) => (
                     <Item key={rep.id}>
-                      <Icon name="github" />
                       <Item.Content>
+                        <Icon name="github" />
                         <Item.Header as="a">{rep.name}</Item.Header>
                         <Item.Description>{rep.description}</Item.Description>
                         <Item.Meta>
@@ -173,7 +173,12 @@ const Home = () => {
                         </Item.Meta>
 
                         <Item.Extra>
-                          <Button href={rep.html_url} target="_blank" secondary>
+                          <Button
+                            floated="right"
+                            href={rep.html_url}
+                            target="_blank"
+                            secondary
+                          >
                             View Repo{" "}
                             <Icon
                               name="github square"
@@ -195,7 +200,7 @@ const Home = () => {
                 boundaryRange={0}
                 onPageChange={(e, data) => handlePageChange(e, data, "gh")}
               />
-
+              <br />
               <Button
                 as="a"
                 size="large"
@@ -209,7 +214,7 @@ const Home = () => {
 
             {/* CodeWars Section */}
 
-            <Grid.Column width={8}>
+            {/* <Grid.Column width={8}>
               <Header as="h1" className="primaryColor">
                 <Icon name="code" size="large" />
                 CodeWars Profile
@@ -296,7 +301,7 @@ const Home = () => {
                 boundaryRange={0}
                 onPageChange={(e, data) => handlePageChange(e, data, "cw")}
               />
-            </Grid.Column>
+            </Grid.Column> */}
           </Grid.Row>
         </Grid>
       </Container>
