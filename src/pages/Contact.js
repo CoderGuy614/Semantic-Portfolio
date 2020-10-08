@@ -30,7 +30,11 @@ const Contact = () => {
           <Card>
             <Card.Content>
               <Card.Header>Email:</Card.Header>
-              <Segment color="teal" textAlign="center">
+              <Segment
+                color="teal"
+                textAlign="center"
+                className="contact-segment"
+              >
                 <Card.Description style={descriptionStyle}>
                   <Icon name="envelope open" size="large" style={iconStyle} />
                   JLutz.110@Gmail.com
@@ -41,7 +45,11 @@ const Contact = () => {
           <Card>
             <Card.Content>
               <Card.Header>Phone:</Card.Header>
-              <Segment color="teal" textAlign="center">
+              <Segment
+                color="teal"
+                textAlign="center"
+                className="contact-segment"
+              >
                 <Card.Description style={descriptionStyle}>
                   <Icon name="phone" size="large" style={iconStyle} />
                   (937) 660-8599
@@ -52,7 +60,11 @@ const Contact = () => {
           <Card>
             <Card.Content>
               <Card.Header>LinkedIn:</Card.Header>
-              <Segment color="teal" textAlign="center">
+              <Segment
+                color="teal"
+                textAlign="center"
+                className="contact-segment"
+              >
                 <Card.Description style={descriptionStyle}>
                   <a
                     href="https://www.linkedin.com/in/jonathan-tyler-lutz/"
@@ -67,7 +79,11 @@ const Contact = () => {
           <Card>
             <Card.Content>
               <Card.Header>Messenger:</Card.Header>
-              <Segment color="teal" textAlign="center">
+              <Segment
+                color="teal"
+                textAlign="center"
+                className="contact-segment"
+              >
                 <Card.Description style={descriptionStyle}>
                   <Icon
                     link
@@ -83,7 +99,11 @@ const Contact = () => {
           <Card>
             <Card.Content>
               <Card.Header>Skype:</Card.Header>
-              <Segment color="teal" textAlign="center">
+              <Segment
+                color="teal"
+                textAlign="center"
+                className="contact-segment"
+              >
                 <Card.Description style={descriptionStyle}>
                   <Icon link name="skype" size="large" style={iconStyle} />
                   Jonny_Legend
@@ -94,7 +114,11 @@ const Contact = () => {
           <Card>
             <Card.Content>
               <Card.Header>WhatsApp:</Card.Header>
-              <Segment color="teal" textAlign="center">
+              <Segment
+                color="teal"
+                textAlign="center"
+                className="contact-segment"
+              >
                 <Card.Description style={descriptionStyle}>
                   <Icon link name="whatsapp" size="large" style={iconStyle} />
                   +855 875-73193
