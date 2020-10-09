@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { Icon, Card, Container, Segment } from "semantic-ui-react";
 
 const containerStyle = {
-  margin: "3em",
+  margin: "2.75em",
   padding: "1em",
 };
 
