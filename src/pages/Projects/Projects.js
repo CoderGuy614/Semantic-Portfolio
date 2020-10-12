@@ -9,7 +9,7 @@ import {
   Header,
   List,
 } from "semantic-ui-react";
-import CardCarouselProject from "./CardCarouselProject/CardCarouselProject";
+import CardCarouselProject from "../../components/CardCarouselProject/CardCarouselProject";
 import PageHeader from "../../components/PageHeader";
 import DoubleButton from "./DoubleButton";
 import Footer from "../../components/Footer";
