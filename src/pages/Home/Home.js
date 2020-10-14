@@ -3,8 +3,6 @@
 import {
   loadRepos,
   loadUser,
-  loadCodewarsUser,
-  loadCodewarsChallenges,
 } from "../../apiCore";
 import Moment from "react-moment";
 import React, { useState, useEffect } from "react";
@@ -31,16 +29,15 @@ const carouselContainerStyle = {
   justifyContent: "center",
 };
 
+const iconStyle = {
+  marginRight: "10px"
+
+}
+
 const Home = () => {
   const [repos, setRepos] = useState([]);
   const [user, setUser] = useState({});
-  const [codewarsUser, setCodewarsUser] = useState({
-    ranks: {
-      overall: {},
-      languages: {},
-    },
-    codeChallenges: {},
-  });
+  const [error, setError] = useState(null)
 
   const paginate = (data, page, perPage) => {
     return data.filter((element, index) => {
@@ -50,11 +47,9 @@ const Home = () => {
     });
   };
 
-  const [codewarsChallenges, setCodewarsChallenges] = useState([]);
   const [ghPage, setGhPage] = useState(1);
-  const [cwPage, setCwPage] = useState(1);
   const [perPage, setPerPage] = useState(3);
-  const [error, setError] = useState(null);
+ 
 
   useEffect(() => {
     loadRepos()
@@ -63,16 +58,16 @@ const Home = () => {
     loadUser()
       .then((usr) => setUser(usr))
       .catch((err) => setError(err));
-    loadCodewarsUser()
-      .then((usr) => setCodewarsUser(usr))
-      .catch((err) => setError(err));
-    loadCodewarsChallenges()
-      .then((chal) => setCodewarsChallenges(chal.data))
-      .catch((err) => setError(err));
   }, []);
 
-  const handlePageChange = (e, data, type) =>
-    type === "gh" ? setGhPage(data.activePage) : setCwPage(data.activePage);
+  const handlePageChange = (e, data) =>
+     setGhPage(data.activePage) 
+
+
+  const CodeIcon = () => {
+    return(
+    <Icon name='code' style={iconStyle} className='primaryColor' />)
+  }
 
   return (
     <div>
@@ -95,22 +90,20 @@ const Home = () => {
             </Grid.Row>
             <Grid.Row>
               <Header as="h3" style={{ fontSize: "2em", marginTop: "2em" }}>
-                Not your average web developer...
+                Modern Web Application Design and Development
               </Header>
               <Header as="h5" style={{ fontSize: "1.33em", marginTop: "2em" }}>
                 Services Offered:
               </Header>
-              <List style={{ fontSize: "1.33em" }} bulleted>
-                <List.Item>
-                  Complete Full Stack Application Design & Development
-                </List.Item>
-                <List.Item>Custom API Design</List.Item>
-                <List.Item>NoSQL & SQL Databases</List.Item>
-                <List.Item>Responsive Website Design</List.Item>
-                <List.Item>Progressive Web Apps (PWA's) </List.Item>
-                <List.Item>Mobile Apps (React Native) </List.Item>
-                <List.Item>Custom User Interface (UI) Design</List.Item>
-                <List.Item>
+              <List style={{ fontSize: "1.33em" }}>
+
+                <List.Item><CodeIcon />Custom API Design</List.Item>
+                <List.Item><CodeIcon />NoSQL & SQL Databases</List.Item>
+                <List.Item><CodeIcon />Responsive Website Design</List.Item>
+                <List.Item><CodeIcon />Progressive Web Apps (PWA's) </List.Item>
+                <List.Item><CodeIcon />Mobile Apps (React Native) </List.Item>
+                <List.Item><CodeIcon />Custom User Interface (UI) Design</List.Item>
+                <List.Item><CodeIcon />
                   Project Management from Concept to Deployment
                 </List.Item>
               </List>
@@ -198,7 +191,7 @@ const Home = () => {
                 style={{ maxWidth: "100%", marginBottom: "1em" }}
                 totalPages={Math.ceil(repos.length / perPage)}
                 boundaryRange={0}
-                onPageChange={(e, data) => handlePageChange(e, data, "gh")}
+                onPageChange={(e, data) => handlePageChange(e, data)}
               />
               <br />
               <Button
