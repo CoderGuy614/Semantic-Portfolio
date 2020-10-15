@@ -31,7 +31,7 @@ const About = () => {
               src={require("../img/personal/personal1.jpg")}
             />
             <Item.Content>
-              <Item.Header>Born:</Item.Header> February, 2 1985
+              <Item.Header>Born:</Item.Header> February 2, 1985
               <hr />
               <Item.Header>Birthplace:</Item.Header> Columbus, Ohio USA
               <hr />
