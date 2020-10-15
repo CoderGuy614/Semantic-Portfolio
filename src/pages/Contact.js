@@ -52,7 +52,7 @@ const Contact = () => {
               >
                 <Card.Description style={descriptionStyle}>
                   <Icon name="phone" size="large" style={iconStyle} />
-                  (937) 660-8599
+                  (614) 400-9208
                 </Card.Description>
               </Segment>
             </Card.Content>
@@ -113,15 +113,15 @@ const Contact = () => {
           </Card>
           <Card>
             <Card.Content>
-              <Card.Header>WhatsApp:</Card.Header>
+              <Card.Header>Alternate Phone:</Card.Header>
               <Segment
                 color="teal"
                 textAlign="center"
                 className="contact-segment"
               >
                 <Card.Description style={descriptionStyle}>
-                  <Icon link name="whatsapp" size="large" style={iconStyle} />
-                  +855 875-73193
+                  <Icon link name="phone" size="large" style={iconStyle} />
+                  (937) 660-8599
                 </Card.Description>
               </Segment>
             </Card.Content>
