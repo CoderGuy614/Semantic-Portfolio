@@ -39,7 +39,7 @@ const Footer = () => {
                 </List.Item>
                 <List.Item
                   as="a"
-                  href="https://real-estate-client.herokuapp.com/"
+                  href="https://real-estate-9d554.web.app/"
                 >
                   Real Estate
                 </List.Item>

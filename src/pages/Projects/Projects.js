@@ -295,7 +295,7 @@ const Projects = () => {
             <Icon name="star" color="yellow" />
           </Divider>
           {/* Project 3 RealEstate */}
-          {/* <Item style={itemStyle}>
+          <Item style={itemStyle}>
             <CardCarouselProject images={realEstateImages} />
             <Item.Content>
               <Item.Header as="a" className="mobile-stacked">
@@ -359,7 +359,7 @@ const Projects = () => {
               </List>
               <div style={flexCenter}>
                 <DoubleButton
-                  appUrl="https://real-estate-client.herokuapp.com/"
+                  appUrl="https://real-estate-9d554.web.app/"
                   githubUrl="https://github.com/CoderGuy614/real-estate-client"
                 />
               </div>
@@ -368,7 +368,7 @@ const Projects = () => {
 
           <Divider horizontal>
             <Icon name="star" color="yellow" />
-          </Divider> */}
+          </Divider>
           {/* Project 4 CamboCraft */}
           <Item style={itemStyle}>
             <CardCarouselProject images={camboCraftImages} />
