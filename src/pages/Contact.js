@@ -76,7 +76,7 @@ const Contact = () => {
               </Segment>
             </Card.Content>
           </Card>
-          <Card>
+          {/* <Card>
             <Card.Content>
               <Card.Header>Messenger:</Card.Header>
               <Segment
@@ -95,8 +95,8 @@ const Contact = () => {
                 </Card.Description>
               </Segment>
             </Card.Content>
-          </Card>
-          <Card>
+          </Card> */}
+          {/* <Card>
             <Card.Content>
               <Card.Header>Skype:</Card.Header>
               <Segment
@@ -110,8 +110,8 @@ const Contact = () => {
                 </Card.Description>
               </Segment>
             </Card.Content>
-          </Card>
-          <Card>
+          </Card> */}
+          {/* <Card>
             <Card.Content>
               <Card.Header>Alternate Phone:</Card.Header>
               <Segment
@@ -125,7 +125,7 @@ const Contact = () => {
                 </Card.Description>
               </Segment>
             </Card.Content>
-          </Card>
+          </Card> */}
         </Card.Group>
       </Container>
       <Footer />
