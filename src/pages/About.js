@@ -35,7 +35,7 @@ const About = () => {
               <hr />
               <Item.Header>Birthplace:</Item.Header> Columbus, Ohio USA
               <hr />
-              <Item.Header>Current City:</Item.Header> Hilliard, Ohio USA
+              <Item.Header>Current City:</Item.Header> Seattle, WA USA
               <hr />
               <Item.Header>Hobbies & Interests:</Item.Header> Travel, Scuba
               Diving, Hiking & Camping, Health & Fitness, Technology
