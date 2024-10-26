@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
 
-const DoubleButton = ({ githubUrl, appUrl }) => {
+const DoubleButton = ({ githubUrl, appUrl, disablePrimaryButton }) => {
   return (
     <Button.Group>
       <Button
@@ -12,6 +12,7 @@ const DoubleButton = ({ githubUrl, appUrl }) => {
         labelPosition="left"
         href={appUrl}
         target="_blank"
+        disabled={disablePrimaryButton}
       />
       <Button.Or />
       <Button

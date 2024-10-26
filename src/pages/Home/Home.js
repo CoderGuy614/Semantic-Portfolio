@@ -74,7 +74,7 @@ const Home = () => {
       <PageHeader
         img={require("../../img/personal/personal4.jpg")}
         mainText="Jonny Lutz"
-        subText={"Full Stack Web Developer"}
+        subText={"Front End Engineer"}
         buttonText="See My Work"
         buttonUrl="/projects"
       />
@@ -93,7 +93,7 @@ const Home = () => {
                 Modern Web Application Design and Development
               </Header>
               <Header as="h5" style={{ fontSize: "1.33em", marginTop: "2em" }}>
-                Services Offered:
+                Available Services:
               </Header>
               <List style={{ fontSize: "1.33em" }}>
 

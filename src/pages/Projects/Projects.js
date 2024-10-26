@@ -198,7 +198,7 @@ const Projects = () => {
               </List>
               <div style={flexCenter}>
                 <DoubleButton
-                  appUrl="https://localbiz-siem-reap.herokuapp.com/"
+                  appUrl="https://localbiz-61c04adb2e40.herokuapp.com/"
                   githubUrl="https://github.com/CoderGuy614/LocalBiz"
                 />
               </div>
@@ -219,8 +219,8 @@ const Projects = () => {
               <Item.Meta>Food Ordering and Delivery</Item.Meta>
               <Item.Description>
                 <p>
-                  I was inspired to create this app by a local produce vendor in
-                  my current town of Siem Reap, Camobodia. This hard-working
+                  I was inspired to create this app by a local produce vendor in the 
+                  town of Siem Reap, Cambodia. This hard-working
                   local business often had difficulty communicating with
                   customers about their products, price and delivery. This MERN
                   stack application was created to help them improve their
@@ -286,6 +286,7 @@ const Projects = () => {
                 <DoubleButton
                   appUrl="https://veggieking.herokuapp.com/"
                   githubUrl="https://github.com/CoderGuy614/VeggieKing"
+                  disablePrimaryButton={true}
                 />
               </div>
             </Item.Content>
@@ -361,6 +362,7 @@ const Projects = () => {
                 <DoubleButton
                   appUrl="https://real-estate-9d554.web.app/"
                   githubUrl="https://github.com/CoderGuy614/real-estate-client"
+                  disablePrimaryButton={true}
                 />
               </div>
             </Item.Content>
@@ -439,6 +441,7 @@ const Projects = () => {
                 <DoubleButton
                   appUrl="https://coderguy614.github.io/CamboCraft/"
                   githubUrl="https://github.com/CoderGuy614/CamboCraft"
+                  disablePrimaryButton={true}
                 />
               </div>
             </Item.Content>
@@ -519,6 +522,7 @@ const Projects = () => {
                 <DoubleButton
                   appUrl="https://jtl-clothing-shop.herokuapp.com/"
                   githubUrl="https://github.com/CoderGuy614/React-Clothing-Shop"
+                  disablePrimaryButton={true}
                 />
               </div>
             </Item.Content>
@@ -603,6 +607,7 @@ const Projects = () => {
                 <DoubleButton
                   appUrl="https://spotify-client-jlutz.herokuapp.com/"
                   githubUrl="https://github.com/CoderGuy614/07-Spotify-Client"
+                  disablePrimaryButton={true}
                 />
               </div>
             </Item.Content>
@@ -687,6 +692,7 @@ const Projects = () => {
                 <DoubleButton
                   appUrl="https://airbnb-client-jonnylutz.herokuapp.com/"
                   githubUrl="https://github.com/CoderGuy614/04-airbnb-client"
+                  disablePrimaryButton={true}
                 />
               </div>
             </Item.Content>

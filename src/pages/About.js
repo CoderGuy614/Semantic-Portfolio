@@ -21,7 +21,7 @@ const About = () => {
       <PageHeader
         img={require("../img/personal/personal4.jpg")}
         mainText="About Me"
-        // subText="All About Me"
+      // subText="All About Me"
       />
       <Container style={containerStyle}>
         <Item.Group>
@@ -56,7 +56,7 @@ const About = () => {
             <Grid.Row>
               <Header>Technical Work Experience</Header>
               <Card.Group centered stackable>
-                <Card>
+                {/* <Card>
                   <Card.Content>
                     <Card.Header>Self-Employed</Card.Header>
                     <Card.Meta>April 2019 - Present</Card.Meta>
@@ -66,6 +66,32 @@ const About = () => {
                       NodeJS) web app development. Currently building skills
                       around Redux for global state management and advanced API
                       features with NodeJS.
+                    </Card.Description>
+                  </Card.Content>
+                </Card> */}
+                <Card>
+                  <Card.Content>
+                    <Card.Header>Amazon Web Services (AWS)</Card.Header>
+                    <Card.Meta>May 2022 - Present</Card.Meta>
+                    <p>Front-End Engineer</p>
+                    <Card.Description>
+                      Design, build, test and deploy front-end code utilizing a modern technology stack (React, Typescript, AWS).
+                      Collaborate with Product, UX, and back-end engineering teams to deliver digital products that delight our customers.
+                      Respond to and debug production issues during an on-call rotation.
+                    </Card.Description>
+                  </Card.Content>
+                </Card>
+                <Card>
+                  <Card.Content>
+                    <Card.Header>Huntington National Bank</Card.Header>
+                    <Card.Meta>December 2020 - June 2022</Card.Meta>
+                    <p>Front-End Developer</p>
+                    <Card.Description>
+                      Build features for customer facing online banking applications, primarily used for new account originations.
+                      The majority of these applications were built using the Angular front end framework and a custom component library.
+                      Worked closely with the design team to ensure the applications met the latest design standards and requirements.
+                      Utilized Git for version control.
+                      Participated in code reviews and bug fixing sessions with QA engineers.
                     </Card.Description>
                   </Card.Content>
                 </Card>
@@ -78,7 +104,7 @@ const About = () => {
                     <Card.Meta>August 2012 - January 2015</Card.Meta>
                     <p>Design Engineer</p>
                     <Card.Description>
-                      Design and build complex elecro-mechanical assemblies used
+                      Designed and built complex elecro-mechanical assemblies used
                       in jet engine research experiments. Heavy emphasis on
                       instrumentation and data acquisition (temperature,
                       pressure, heat transfer) during high speed rotation.

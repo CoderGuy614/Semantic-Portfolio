@@ -30,40 +30,49 @@ const Footer = () => {
               <List link inverted>
                 <List.Item
                   as="a"
-                  href="https://localbiz-siem-reap.herokuapp.com/"
+                  href="https://localbiz-61c04adb2e40.herokuapp.com/"
                 >
                   LocalBiz
                 </List.Item>
-                <List.Item as="a" href="https://veggieking.herokuapp.com/">
+                <List.Item
+                  as="a"
+                  href="https://veggieking.herokuapp.com/"
+                  disabled
+                  >
                   VeggieKing
                 </List.Item>
                 <List.Item
                   as="a"
                   href="https://real-estate-9d554.web.app/"
+                  disabled
                 >
                   Real Estate
                 </List.Item>
                 <List.Item
                   as="a"
                   href="https://coderguy614.github.io/CamboCraft/"
+                  disabled
                 >
                   CamboCraft Clothing
                 </List.Item>
                 <List.Item
                   as="a"
                   href="https://jtl-clothing-shop.herokuapp.com/"
+                  disabled
                 >
                   E-Commerce Store
                 </List.Item>
                 <List.Item
                   as="a"
                   href="https://spotify-client-jlutz.herokuapp.com/"
+                  disabled
                 >
                   Spotify Music
                 </List.Item>
                 <List.Item
                   as="a"
                   href="https://airbnb-client-jonnylutz.herokuapp.com/"
+                  disabled
                 >
                   AirBnB Clone
                 </List.Item>
