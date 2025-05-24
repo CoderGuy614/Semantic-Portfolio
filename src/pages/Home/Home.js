@@ -72,7 +72,7 @@ const Home = () => {
   return (
     <div>
       <PageHeader
-        img={require("../../img/personal/personal4.jpg")}
+        img={require("../../img/personal/profile-pic.png")}
         mainText="Jonny Lutz"
         subText={"Front End Engineer"}
         buttonText="See My Work"

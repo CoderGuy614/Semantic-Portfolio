@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <div>
       <PageHeader
-        img={require("../img/personal/personal4.jpg")}
+        img={require("../img/personal/profile-pic.png")}
         mainText="Contact"
         subText="Here's How to Reach Me"
       />

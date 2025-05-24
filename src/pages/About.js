@@ -19,7 +19,7 @@ const About = () => {
   return (
     <div>
       <PageHeader
-        img={require("../img/personal/personal4.jpg")}
+        img={require("../img/personal/profile-pic.png")}
         mainText="About Me"
       // subText="All About Me"
       />

@@ -123,7 +123,7 @@ const Projects = () => {
   return (
     <div>
       <PageHeader
-        img={require("../../img/personal/personal4.jpg")}
+        img={require("../../img/personal/profile-pic.png")}
         mainText="Projects"
         subText="Check out Some of My Work"
       />
