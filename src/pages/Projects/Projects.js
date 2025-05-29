@@ -180,7 +180,7 @@ const Projects = () => {
               <List bulleted className="hide-on-tablet">
                 <List.Item>
                   <List.Header>User authentication</List.Header>
-                  Users can Sign Up and Login with either Email or Facebook
+                  Users can register and login with Email.  Certain API operations are auth protected.
                 </List.Item>
                 <List.Item>
                   <List.Header>Message Center</List.Header>
@@ -189,7 +189,7 @@ const Projects = () => {
                 </List.Item>
                 <List.Item>
                   <List.Header>Location Picker</List.Header>A business owner can
-                  set their map location with the custom picker tool
+                  set their map location with the custom picker tool, powered by Google Maps API.
                 </List.Item>
                 <List.Item>
                   <List.Header>Form Validation</List.Header>All forms use React
@@ -198,7 +198,7 @@ const Projects = () => {
               </List>
               <div style={flexCenter}>
                 <DoubleButton
-                  appUrl="https://localbiz-61c04adb2e40.herokuapp.com/"
+                  appUrl="https://master.d28l3w9jtysc89.amplifyapp.com"
                   githubUrl="https://github.com/CoderGuy614/LocalBiz"
                 />
               </div>
